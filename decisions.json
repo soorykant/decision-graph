@@ -1,0 +1,435 @@
+{
+  "metadata": {
+    "description": "52 synthetic investment decisions from Fernhill Capital, a fictional investment team. The decisions cover 8 fictional companies over 18 months, with cross-company dependencies, reversals and a thesis that evolves over time.",
+    "entities": [
+      "Corvex Payments",
+      "Orbitra Networks",
+      "Thistledown Foods",
+      "Solvane Energy Storage",
+      "Tessellate Data Systems",
+      "Kestrion Avionics",
+      "Halvard Freight Rail",
+      "Pinehollow Biologics"
+    ],
+    "time_range": "2023-03-06 to 2024-08-23",
+    "notes": "All companies, people, funds and figures are invented. Decisions reference each other by ID, share recurring factors and form causal chains. Some decisions are driven by events at other portfolio companies, and several positions are entered, changed and exited more than once."
+  },
+  "decisions": [
+    {
+      "id": "D1",
+      "timestamp": "2023-03-06T10:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Buy",
+      "rationale": "Corvex is growing processed payment volume 45% year over year and adding mid-market merchants faster than any peer we track. The new CTO, who rebuilt the fraud engine at a large card network, should cut fraud losses further. Initiating at $38.",
+      "outcome": "Rose to $55 within four months. +45%."
+    },
+    {
+      "id": "D2",
+      "timestamp": "2023-03-16T14:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Buy",
+      "rationale": "Orbitra's second-generation satellites doubled capacity per satellite, and its five-year backhaul contract with Tessellate Data Systems covers about a third of planned capacity. That contract gives unusual revenue visibility for a capital-heavy business. Initiating at $22.",
+      "outcome": "Reached $31 by August 2023. +41%."
+    },
+    {
+      "id": "D3",
+      "timestamp": "2023-03-27T10:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Hold",
+      "rationale": "Thistledown's snack brands are winning shelf space and volume is up 9%, but the founder-CEO retires in June and no successor has been named. Holding the position and not adding until the board names a successor and the new leader sets out a plan.",
+      "outcome": "Flat until the successor was named, then +12%."
+    },
+    {
+      "id": "D4",
+      "timestamp": "2023-04-07T14:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Buy",
+      "rationale": "Lithium carbonate prices are down about 60% from the peak, and battery cells are Solvane's largest input cost, so margins on its fixed-price utility contracts should expand sharply. Ironbridge Partners, an activist fund, has disclosed a 7% stake and is pushing for a sale of the residential unit. Initiating at $64.",
+      "outcome": "+28% by September 2023 as margins expanded."
+    },
+    {
+      "id": "D5",
+      "timestamp": "2023-04-17T10:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Buy",
+      "rationale": "Tessellate's edge data platform carries remote-site traffic over Orbitra Networks' satellite backhaul at about half the cost of terrestrial fibre, which explains its 71% gross margin. Net revenue retention is 128%. Initiating at $90.",
+      "outcome": "Rose to $118 by October 2023. +31%."
+    },
+    {
+      "id": "D6",
+      "timestamp": "2023-04-27T14:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Pass",
+      "rationale": "Kestrion's flight-control software is best in class, but one airframer accounts for 68% of revenue and that customer's delivery schedule keeps slipping. We would revisit if Kestrion wins a second major airframer and its largest customer falls below 50% of revenue.",
+      "outcome": "Fell 18% over the next quarter on delivery delays."
+    },
+    {
+      "id": "D7",
+      "timestamp": "2023-05-08T10:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Buy",
+      "rationale": "Halvard is the lowest-cost hauler on its corridor, with a 61% operating ratio. Its pilot of battery-electric locomotives built on Solvane Energy Storage packs could cut fuel cost per ton-mile by a fifth if it scales. Initiating at $140.",
+      "outcome": "+14% over six months."
+    },
+    {
+      "id": "D8",
+      "timestamp": "2023-05-19T14:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Pass",
+      "rationale": "Pinehollow's antibody for severe eczema looks promising in animal studies, but Phase 1 enrolled only 24 patients and the company has 14 months of cash. Passing until Phase 2 data are out and the financing risk is resolved.",
+      "outcome": "Raised equity at a 30% discount two months later."
+    },
+    {
+      "id": "D9",
+      "timestamp": "2023-05-29T10:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Buy",
+      "rationale": "Adding to Orbitra after the third launch succeeded and the Tessellate contract went live on schedule. Utilisation of the new satellites reached 74% within six weeks, ahead of guidance.",
+      "outcome": "+18% by year end."
+    },
+    {
+      "id": "D10",
+      "timestamp": "2023-06-08T14:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Hold",
+      "rationale": "Ironbridge won two board seats and the sale process for the residential unit has started. Margins expanded as expected, but the share price already reflects most of it. Holding.",
+      "outcome": "Flat for three months."
+    },
+    {
+      "id": "D11",
+      "timestamp": "2023-06-19T10:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Buy",
+      "rationale": "The board named Thistledown's head of international as CEO. Her plan keeps the brand strategy and closes two inefficient plants, which resolves the leadership uncertainty behind our D3 hold. Adding at $47.",
+      "outcome": "+16% by February 2024."
+    },
+    {
+      "id": "D12",
+      "timestamp": "2023-06-30T14:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Buy",
+      "rationale": "Adding to Tessellate. Orbitra Networks' capacity expansion lowers Tessellate's backhaul cost by another 15% next year, and two telecom carriers have signed on as resellers.",
+      "outcome": "+12% over four months."
+    },
+    {
+      "id": "D13",
+      "timestamp": "2023-07-10T10:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Sell",
+      "rationale": "Lithium carbonate prices rose 45% in eight weeks on supply cuts, and about 40% of Solvane's backlog is fixed-price, so margins will compress next year. Cutting the position in half.",
+      "outcome": "Fell 22% after the next earnings call. The trim avoided half the loss."
+    },
+    {
+      "id": "D14",
+      "timestamp": "2023-07-20T14:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Hold",
+      "rationale": "Volumes are down 4% on weaker grain exports, but pricing held and the battery locomotive pilot is meeting its targets. Holding until the pilot's winter performance data are in.",
+      "outcome": "Flat."
+    },
+    {
+      "id": "D15",
+      "timestamp": "2023-07-31T10:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Hold",
+      "rationale": "Corvex's CTO left after nine months and payment volume growth slowed to 31%. The business is still healthy, but the departure is unexplained. Holding and not adding until we understand why.",
+      "outcome": "Drifted down 8%."
+    },
+    {
+      "id": "D16",
+      "timestamp": "2023-08-11T14:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Buy",
+      "rationale": "Reversing our D8 pass. Phase 2 was strong, with 58% of patients reaching clear or almost-clear skin versus 21% on placebo, and the company then raised two years of cash. The financing risk is gone. Initiating at $26.",
+      "outcome": "+70% by mid-2024."
+    },
+    {
+      "id": "D17",
+      "timestamp": "2023-08-21T10:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Buy",
+      "rationale": "Reversing our D6 pass. Kestrion won the flight-control contract for a second airframer's regional jet, which brings its largest customer down to 47% of revenue. The stock is also 20% cheaper than when we passed. Initiating at $52.",
+      "outcome": "+38% over the next nine months."
+    },
+    {
+      "id": "D18",
+      "timestamp": "2023-08-31T14:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Hold",
+      "rationale": "The plant closures are on track, but Northvale Grocers, which accounts for 19% of Thistledown's sales, is paying suppliers late. Holding while we watch Northvale's credit.",
+      "outcome": "Fell 9% as Northvale's problems grew."
+    },
+    {
+      "id": "D19",
+      "timestamp": "2023-09-11T10:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Hold",
+      "rationale": "Orbitra's growth is intact, but Tessellate Data Systems has started testing a terrestrial 5G backhaul provider at three sites. Tessellate is the anchor customer, so any shift matters. Holding and not adding.",
+      "outcome": "Flat."
+    },
+    {
+      "id": "D20",
+      "timestamp": "2023-09-22T14:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Sell",
+      "rationale": "Exiting Solvane. Lithium prices stayed high, and Ironbridge sold most of its stake after the residential-unit sale fell through, which removes the catalyst. The D4 thesis no longer holds.",
+      "outcome": "Fell another 25% over six months. Good exit."
+    },
+    {
+      "id": "D21",
+      "timestamp": "2023-10-02T10:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Hold",
+      "rationale": "The Phase 3 trial is fully enrolled, with the readout due in about nine months. The position is up 40%, so we are holding rather than adding ahead of a binary event.",
+      "outcome": "Rose another 20% into the readout."
+    },
+    {
+      "id": "D22",
+      "timestamp": "2023-10-12T14:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Sell",
+      "rationale": "Exiting Corvex. The company restated two years of revenue after booking merchant cash advances as processing fees, which overstated growth by about 8 points. Together with the unexplained CTO exit behind our D15 hold, we no longer trust management's numbers.",
+      "outcome": "Fell 41% over the following month. The exit avoided most of the drop."
+    },
+    {
+      "id": "D23",
+      "timestamp": "2023-10-23T10:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Hold",
+      "rationale": "The battery locomotive pilot beat its targets through the winter, and Halvard plans to order 40 more units built on Solvane Energy Storage packs. Solvane's own margin problems add delivery risk, so we are holding rather than adding.",
+      "outcome": "+6%."
+    },
+    {
+      "id": "D24",
+      "timestamp": "2023-11-03T14:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Hold",
+      "rationale": "Tessellate is growing steadily at 34%, but its 5G backhaul tests suggest it may move traffic off Orbitra Networks. That would raise costs in the short term but reduce its reliance on a single supplier. Holding.",
+      "outcome": "+4%."
+    },
+    {
+      "id": "D25",
+      "timestamp": "2023-11-13T10:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Buy",
+      "rationale": "Adding to Kestrion. The second airframer's regional jet entered flight testing on schedule, and Kestrion's software content per aircraft is 30% higher than on its older programme.",
+      "outcome": "+15%."
+    },
+    {
+      "id": "D26",
+      "timestamp": "2023-11-23T14:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Sell",
+      "rationale": "Selling Thistledown. Northvale Grocers filed for bankruptcy, and Thistledown will write off about $40 million of receivables and lose shelf space as Northvale closes stores. The customer concentration risk has now played out.",
+      "outcome": "Fell 17%, then recovered within five months."
+    },
+    {
+      "id": "D27",
+      "timestamp": "2023-12-04T10:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Buy",
+      "rationale": "Reversing our D20 exit. Lithium prices are down 35% from their peak, the fixed-price contracts that hurt margins have rolled off, and Halvard Freight Rail's 40-locomotive order opens a new rail market. Buying at $41.",
+      "outcome": "+33% in six months."
+    },
+    {
+      "id": "D28",
+      "timestamp": "2023-12-15T14:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Sell",
+      "rationale": "Cutting Orbitra by two-thirds. Tessellate Data Systems moved 40% of its traffic to terrestrial 5G, a quarter after Orbitra's CFO called the contract fully secure. Management's credibility has taken a real hit.",
+      "outcome": "Fell 30% over three months."
+    },
+    {
+      "id": "D29",
+      "timestamp": "2023-12-25T10:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Hold",
+      "rationale": "Tessellate's move to 5G backhaul raised short-term costs and cut gross margin to 66%, but it ended its reliance on Orbitra Networks as a single supplier. Holding, since the move makes the business more resilient.",
+      "outcome": "+9%."
+    },
+    {
+      "id": "D30",
+      "timestamp": "2024-01-04T14:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Pass",
+      "rationale": "Corvex is down 55% from our exit and looks cheap, but the restatement review is still open and the board has not replaced the CEO and CFO who approved the old accounting. Passing until there is new leadership.",
+      "outcome": "Fell another 15%."
+    },
+    {
+      "id": "D31",
+      "timestamp": "2024-01-15T10:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Sell",
+      "rationale": "Exiting Halvard. Grainline Cooperative, which ships 31% of Halvard's volume, will run its own rail fleet from next year. Management knew the talks were under way and still guided for volume growth, so we no longer trust its guidance.",
+      "outcome": "Fell 26% over two months."
+    },
+    {
+      "id": "D32",
+      "timestamp": "2024-01-26T14:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Buy",
+      "rationale": "Adding to Pinehollow ahead of the Phase 3 readout. A competitor's similar antibody passed its own Phase 3 trial, which lowers the biological risk, and enrollment and dropout rates match the Phase 2 study.",
+      "outcome": "+10% into the readout."
+    },
+    {
+      "id": "D33",
+      "timestamp": "2024-02-05T10:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Hold",
+      "rationale": "Certification of the regional jet has slipped six months because of a supplier issue unrelated to Kestrion. Revenue moves to the right, but the contract win stands. Holding.",
+      "outcome": "-7%."
+    },
+    {
+      "id": "D34",
+      "timestamp": "2024-02-15T14:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Sell",
+      "rationale": "Selling the rest of Orbitra. A short-seller report showed that Orbitra counted reserved but unused capacity as utilised, and the company has since confirmed it. After the overconfident Tessellate guidance, this ends our trust in management.",
+      "outcome": "Fell 48%."
+    },
+    {
+      "id": "D35",
+      "timestamp": "2024-02-26T10:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Buy",
+      "rationale": "Reversing our D26 sale. Thistledown replaced Northvale's shelf space through two national chains, and no single customer is now above 12% of sales. Buying at $38, below our original entry.",
+      "outcome": "+29% over nine months."
+    },
+    {
+      "id": "D36",
+      "timestamp": "2024-03-08T14:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Buy",
+      "rationale": "Adding to Tessellate. Leaving Orbitra Networks looks prescient after the short-seller report, and gross margin is back to 69% as 5G volumes grew. Its supply chain no longer depends on a single provider.",
+      "outcome": "+21%."
+    },
+    {
+      "id": "D37",
+      "timestamp": "2024-03-18T10:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Pass",
+      "rationale": "Corvex named an outside CEO, but the CFO who approved the old accounting remains. Still passing.",
+      "outcome": "+5%."
+    },
+    {
+      "id": "D38",
+      "timestamp": "2024-03-28T14:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Hold",
+      "rationale": "Solvane delivered the first 12 locomotive packs to Halvard Freight Rail on time, even though Halvard has lost Grainline's volume. Lithium prices remain low. Holding at a 25% gain.",
+      "outcome": "+8%."
+    },
+    {
+      "id": "D39",
+      "timestamp": "2024-04-08T10:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Pass",
+      "rationale": "Halvard trades 30% below our exit price and its battery fleet lowers costs, but the management team that hid the Grainline talks is still in place. After Corvex and Orbitra, we now require a leadership change before returning to any company that misled investors. Passing.",
+      "outcome": "+11%. A missed gain, but the rule held."
+    },
+    {
+      "id": "D40",
+      "timestamp": "2024-04-19T14:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Hold",
+      "rationale": "Certification is back on track for entry into service in the spring. The stock is up 40% since our D17 entry, so we are holding rather than adding.",
+      "outcome": "+9%."
+    },
+    {
+      "id": "D41",
+      "timestamp": "2024-04-29T10:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Pass",
+      "rationale": "Orbitra has restated its utilisation figures and trades at half of book value, but the same executives are in charge. Passing, in line with the leadership rule we set at D39.",
+      "outcome": "Fell 12%."
+    },
+    {
+      "id": "D42",
+      "timestamp": "2024-05-09T14:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Sell",
+      "rationale": "Selling Pinehollow. Phase 3 missed its primary endpoint at 16 weeks, and only the 52-week secondary endpoint was positive. Management had called the trial de-risked at its investor day, which damages its credibility.",
+      "outcome": "Fell 52% on the readout. We sold after the first 40% drop."
+    },
+    {
+      "id": "D43",
+      "timestamp": "2024-05-20T10:00:00Z",
+      "entity": "Solvane Energy Storage",
+      "decision": "Sell",
+      "rationale": "Exiting Solvane a second time. A utility customer disclosed a recall of Solvane battery modules for thermal faults that Solvane never mentioned in its filings. Hiding a recall is a credibility failure, and it puts the Halvard Freight Rail rollout at risk.",
+      "outcome": "Fell 35%."
+    },
+    {
+      "id": "D44",
+      "timestamp": "2024-05-31T14:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Sell",
+      "rationale": "Cutting Tessellate by a third after a 90% gain since our D5 entry. Fundamentals are strong, but at 18 times sales the stock is at the top of its peer range.",
+      "outcome": "Pulled back 15%, then recovered."
+    },
+    {
+      "id": "D45",
+      "timestamp": "2024-06-10T10:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Buy",
+      "rationale": "Buying Corvex again. The new CEO replaced the CFO and the head of revenue accounting, the restatement review closed with no further adjustments, and volume growth is back to 28%. This meets the leadership condition from D30 and D39. Buying at $21.",
+      "outcome": "+52% over the following year."
+    },
+    {
+      "id": "D46",
+      "timestamp": "2024-06-20T14:00:00Z",
+      "entity": "Thistledown Foods",
+      "decision": "Hold",
+      "rationale": "Thistledown's turnaround is working: volume is up 7% and margins are above where they were before the Northvale bankruptcy. Holding at a fair valuation.",
+      "outcome": "+6%."
+    },
+    {
+      "id": "D47",
+      "timestamp": "2024-07-01T10:00:00Z",
+      "entity": "Kestrion Avionics",
+      "decision": "Sell",
+      "rationale": "Selling Kestrion. The regional jet has entered service and the content story has played out. At 34 times earnings, the stock assumes a third airframer win that has not happened. Taking a 65% gain.",
+      "outcome": "Flat over the next six months."
+    },
+    {
+      "id": "D48",
+      "timestamp": "2024-07-12T14:00:00Z",
+      "entity": "Halvard Freight Rail",
+      "decision": "Buy",
+      "rationale": "Buying Halvard. The board replaced the CEO and the head of investor relations, which meets the leadership condition from D39. The battery fleet has cut fuel cost per ton-mile by 18%, and Halvard has qualified a second battery supplier after the Solvane Energy Storage recall.",
+      "outcome": "+22%."
+    },
+    {
+      "id": "D49",
+      "timestamp": "2024-07-22T10:00:00Z",
+      "entity": "Orbitra Networks",
+      "decision": "Pass",
+      "rationale": "Orbitra has a new CFO, but the CEO who oversaw the utilisation misstatement is still in place. Still passing.",
+      "outcome": "-6%."
+    },
+    {
+      "id": "D50",
+      "timestamp": "2024-08-01T14:00:00Z",
+      "entity": "Tessellate Data Systems",
+      "decision": "Buy",
+      "rationale": "Adding back to Tessellate after the pullback that followed our D44 trim. Growth has reaccelerated to 38%, and 5G backhaul now carries 70% of its traffic.",
+      "outcome": "+17%."
+    },
+    {
+      "id": "D51",
+      "timestamp": "2024-08-12T10:00:00Z",
+      "entity": "Corvex Payments",
+      "decision": "Hold",
+      "rationale": "Corvex's first two quarters under the new team were clean, with growth at 29%, and the new CFO now publishes more detailed disclosures than the old team ever did. Holding.",
+      "outcome": "+9%."
+    },
+    {
+      "id": "D52",
+      "timestamp": "2024-08-23T14:00:00Z",
+      "entity": "Pinehollow Biologics",
+      "decision": "Pass",
+      "rationale": "Pinehollow plans a new Phase 3 trial built around the 52-week endpoint and trades close to its cash value, but management has never explained why it called the first trial de-risked. Passing, in line with the leadership rule we set at D39.",
+      "outcome": "Flat."
+    }
+  ]
+}
