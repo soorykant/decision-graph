@@ -1,0 +1,2858 @@
+{
+  "metadata": {
+    "built_at": "2026-11-15 19:04:29.041587+00:00",
+    "total_nodes": 144,
+    "total_edges": 267,
+    "node_type_counts": {
+      "decision": 52,
+      "entity": 8,
+      "factor": 38,
+      "event": 46
+    },
+    "edge_type_counts": {
+      "about": 52,
+      "references": 18,
+      "reverses": 29,
+      "influenced": 168
+    },
+    "entities": [
+      "Corvex Payments",
+      "Orbitra Networks",
+      "Thistledown Foods",
+      "Solvane Energy Storage",
+      "Tessellate Data Systems",
+      "Kestrion Avionics",
+      "Halvard Freight Rail",
+      "Pinehollow Biologics"
+    ]
+  },
+  "graph": {
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {
+        "type": "decision",
+        "label": "Buy Corvex Payments (D1)",
+        "decision_id": "D1",
+        "entity": "Corvex Payments",
+        "action": "Buy",
+        "timestamp": "2023-03-06T10:00:00+00:00",
+        "rationale": "Corvex is growing processed payment volume 45% year over year and adding mid-market merchants faster than any peer we track. The new CTO, who rebuilt the fraud engine at a large card network, should cut fraud losses further. Initiating at $38.",
+        "outcome": "Rose to $55 within four months. +45%.",
+        "id": "decision:D1"
+      },
+      {
+        "type": "entity",
+        "label": "Corvex Payments",
+        "entity": "Corvex Payments",
+        "id": "entity:corvex_payments"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Orbitra Networks (D2)",
+        "decision_id": "D2",
+        "entity": "Orbitra Networks",
+        "action": "Buy",
+        "timestamp": "2023-03-16T14:00:00+00:00",
+        "rationale": "Orbitra's second-generation satellites doubled capacity per satellite, and its five-year backhaul contract with Tessellate Data Systems covers about a third of planned capacity. That contract gives unusual revenue visibility for a capital-heavy business. Initiating at $22.",
+        "outcome": "Reached $31 by August 2023. +41%.",
+        "id": "decision:D2"
+      },
+      {
+        "type": "entity",
+        "label": "Orbitra Networks",
+        "entity": "Orbitra Networks",
+        "id": "entity:orbitra_networks"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Thistledown Foods (D3)",
+        "decision_id": "D3",
+        "entity": "Thistledown Foods",
+        "action": "Hold",
+        "timestamp": "2023-03-27T10:00:00+00:00",
+        "rationale": "Thistledown's snack brands are winning shelf space and volume is up 9%, but the founder-CEO retires in June and no successor has been named. Holding the position and not adding until the board names a successor and the new leader sets out a plan.",
+        "outcome": "Flat until the successor was named, then +12%.",
+        "id": "decision:D3"
+      },
+      {
+        "type": "entity",
+        "label": "Thistledown Foods",
+        "entity": "Thistledown Foods",
+        "id": "entity:thistledown_foods"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Solvane Energy Storage (D4)",
+        "decision_id": "D4",
+        "entity": "Solvane Energy Storage",
+        "action": "Buy",
+        "timestamp": "2023-04-07T14:00:00+00:00",
+        "rationale": "Lithium carbonate prices are down about 60% from the peak, and battery cells are Solvane's largest input cost, so margins on its fixed-price utility contracts should expand sharply. Ironbridge Partners, an activist fund, has disclosed a 7% stake and is pushing for a sale of the residential unit. Initiating at $64.",
+        "outcome": "+28% by September 2023 as margins expanded.",
+        "id": "decision:D4"
+      },
+      {
+        "type": "entity",
+        "label": "Solvane Energy Storage",
+        "entity": "Solvane Energy Storage",
+        "id": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Tessellate Data Systems (D5)",
+        "decision_id": "D5",
+        "entity": "Tessellate Data Systems",
+        "action": "Buy",
+        "timestamp": "2023-04-17T10:00:00+00:00",
+        "rationale": "Tessellate's edge data platform carries remote-site traffic over Orbitra Networks' satellite backhaul at about half the cost of terrestrial fibre, which explains its 71% gross margin. Net revenue retention is 128%. Initiating at $90.",
+        "outcome": "Rose to $118 by October 2023. +31%.",
+        "id": "decision:D5"
+      },
+      {
+        "type": "entity",
+        "label": "Tessellate Data Systems",
+        "entity": "Tessellate Data Systems",
+        "id": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Kestrion Avionics (D6)",
+        "decision_id": "D6",
+        "entity": "Kestrion Avionics",
+        "action": "Pass",
+        "timestamp": "2023-04-27T14:00:00+00:00",
+        "rationale": "Kestrion's flight-control software is best in class, but one airframer accounts for 68% of revenue and that customer's delivery schedule keeps slipping. We would revisit if Kestrion wins a second major airframer and its largest customer falls below 50% of revenue.",
+        "outcome": "Fell 18% over the next quarter on delivery delays.",
+        "id": "decision:D6"
+      },
+      {
+        "type": "entity",
+        "label": "Kestrion Avionics",
+        "entity": "Kestrion Avionics",
+        "id": "entity:kestrion_avionics"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Halvard Freight Rail (D7)",
+        "decision_id": "D7",
+        "entity": "Halvard Freight Rail",
+        "action": "Buy",
+        "timestamp": "2023-05-08T10:00:00+00:00",
+        "rationale": "Halvard is the lowest-cost hauler on its corridor, with a 61% operating ratio. Its pilot of battery-electric locomotives built on Solvane Energy Storage packs could cut fuel cost per ton-mile by a fifth if it scales. Initiating at $140.",
+        "outcome": "+14% over six months.",
+        "id": "decision:D7"
+      },
+      {
+        "type": "entity",
+        "label": "Halvard Freight Rail",
+        "entity": "Halvard Freight Rail",
+        "id": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Pinehollow Biologics (D8)",
+        "decision_id": "D8",
+        "entity": "Pinehollow Biologics",
+        "action": "Pass",
+        "timestamp": "2023-05-19T14:00:00+00:00",
+        "rationale": "Pinehollow's antibody for severe eczema looks promising in animal studies, but Phase 1 enrolled only 24 patients and the company has 14 months of cash. Passing until Phase 2 data are out and the financing risk is resolved.",
+        "outcome": "Raised equity at a 30% discount two months later.",
+        "id": "decision:D8"
+      },
+      {
+        "type": "entity",
+        "label": "Pinehollow Biologics",
+        "entity": "Pinehollow Biologics",
+        "id": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Orbitra Networks (D9)",
+        "decision_id": "D9",
+        "entity": "Orbitra Networks",
+        "action": "Buy",
+        "timestamp": "2023-05-29T10:00:00+00:00",
+        "rationale": "Adding to Orbitra after the third launch succeeded and the Tessellate contract went live on schedule. Utilisation of the new satellites reached 74% within six weeks, ahead of guidance.",
+        "outcome": "+18% by year end.",
+        "id": "decision:D9"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Solvane Energy Storage (D10)",
+        "decision_id": "D10",
+        "entity": "Solvane Energy Storage",
+        "action": "Hold",
+        "timestamp": "2023-06-08T14:00:00+00:00",
+        "rationale": "Ironbridge won two board seats and the sale process for the residential unit has started. Margins expanded as expected, but the share price already reflects most of it. Holding.",
+        "outcome": "Flat for three months.",
+        "id": "decision:D10"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Thistledown Foods (D11)",
+        "decision_id": "D11",
+        "entity": "Thistledown Foods",
+        "action": "Buy",
+        "timestamp": "2023-06-19T10:00:00+00:00",
+        "rationale": "The board named Thistledown's head of international as CEO. Her plan keeps the brand strategy and closes two inefficient plants, which resolves the leadership uncertainty behind our D3 hold. Adding at $47.",
+        "outcome": "+16% by February 2024.",
+        "id": "decision:D11"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Tessellate Data Systems (D12)",
+        "decision_id": "D12",
+        "entity": "Tessellate Data Systems",
+        "action": "Buy",
+        "timestamp": "2023-06-30T14:00:00+00:00",
+        "rationale": "Adding to Tessellate. Orbitra Networks' capacity expansion lowers Tessellate's backhaul cost by another 15% next year, and two telecom carriers have signed on as resellers.",
+        "outcome": "+12% over four months.",
+        "id": "decision:D12"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Solvane Energy Storage (D13)",
+        "decision_id": "D13",
+        "entity": "Solvane Energy Storage",
+        "action": "Sell",
+        "timestamp": "2023-07-10T10:00:00+00:00",
+        "rationale": "Lithium carbonate prices rose 45% in eight weeks on supply cuts, and about 40% of Solvane's backlog is fixed-price, so margins will compress next year. Cutting the position in half.",
+        "outcome": "Fell 22% after the next earnings call. The trim avoided half the loss.",
+        "id": "decision:D13"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Halvard Freight Rail (D14)",
+        "decision_id": "D14",
+        "entity": "Halvard Freight Rail",
+        "action": "Hold",
+        "timestamp": "2023-07-20T14:00:00+00:00",
+        "rationale": "Volumes are down 4% on weaker grain exports, but pricing held and the battery locomotive pilot is meeting its targets. Holding until the pilot's winter performance data are in.",
+        "outcome": "Flat.",
+        "id": "decision:D14"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Corvex Payments (D15)",
+        "decision_id": "D15",
+        "entity": "Corvex Payments",
+        "action": "Hold",
+        "timestamp": "2023-07-31T10:00:00+00:00",
+        "rationale": "Corvex's CTO left after nine months and payment volume growth slowed to 31%. The business is still healthy, but the departure is unexplained. Holding and not adding until we understand why.",
+        "outcome": "Drifted down 8%.",
+        "id": "decision:D15"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Pinehollow Biologics (D16)",
+        "decision_id": "D16",
+        "entity": "Pinehollow Biologics",
+        "action": "Buy",
+        "timestamp": "2023-08-11T14:00:00+00:00",
+        "rationale": "Reversing our D8 pass. Phase 2 was strong, with 58% of patients reaching clear or almost-clear skin versus 21% on placebo, and the company then raised two years of cash. The financing risk is gone. Initiating at $26.",
+        "outcome": "+70% by mid-2024.",
+        "id": "decision:D16"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Kestrion Avionics (D17)",
+        "decision_id": "D17",
+        "entity": "Kestrion Avionics",
+        "action": "Buy",
+        "timestamp": "2023-08-21T10:00:00+00:00",
+        "rationale": "Reversing our D6 pass. Kestrion won the flight-control contract for a second airframer's regional jet, which brings its largest customer down to 47% of revenue. The stock is also 20% cheaper than when we passed. Initiating at $52.",
+        "outcome": "+38% over the next nine months.",
+        "id": "decision:D17"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Thistledown Foods (D18)",
+        "decision_id": "D18",
+        "entity": "Thistledown Foods",
+        "action": "Hold",
+        "timestamp": "2023-08-31T14:00:00+00:00",
+        "rationale": "The plant closures are on track, but Northvale Grocers, which accounts for 19% of Thistledown's sales, is paying suppliers late. Holding while we watch Northvale's credit.",
+        "outcome": "Fell 9% as Northvale's problems grew.",
+        "id": "decision:D18"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Orbitra Networks (D19)",
+        "decision_id": "D19",
+        "entity": "Orbitra Networks",
+        "action": "Hold",
+        "timestamp": "2023-09-11T10:00:00+00:00",
+        "rationale": "Orbitra's growth is intact, but Tessellate Data Systems has started testing a terrestrial 5G backhaul provider at three sites. Tessellate is the anchor customer, so any shift matters. Holding and not adding.",
+        "outcome": "Flat.",
+        "id": "decision:D19"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Solvane Energy Storage (D20)",
+        "decision_id": "D20",
+        "entity": "Solvane Energy Storage",
+        "action": "Sell",
+        "timestamp": "2023-09-22T14:00:00+00:00",
+        "rationale": "Exiting Solvane. Lithium prices stayed high, and Ironbridge sold most of its stake after the residential-unit sale fell through, which removes the catalyst. The D4 thesis no longer holds.",
+        "outcome": "Fell another 25% over six months. Good exit.",
+        "id": "decision:D20"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Pinehollow Biologics (D21)",
+        "decision_id": "D21",
+        "entity": "Pinehollow Biologics",
+        "action": "Hold",
+        "timestamp": "2023-10-02T10:00:00+00:00",
+        "rationale": "The Phase 3 trial is fully enrolled, with the readout due in about nine months. The position is up 40%, so we are holding rather than adding ahead of a binary event.",
+        "outcome": "Rose another 20% into the readout.",
+        "id": "decision:D21"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Corvex Payments (D22)",
+        "decision_id": "D22",
+        "entity": "Corvex Payments",
+        "action": "Sell",
+        "timestamp": "2023-10-12T14:00:00+00:00",
+        "rationale": "Exiting Corvex. The company restated two years of revenue after booking merchant cash advances as processing fees, which overstated growth by about 8 points. Together with the unexplained CTO exit behind our D15 hold, we no longer trust management's numbers.",
+        "outcome": "Fell 41% over the following month. The exit avoided most of the drop.",
+        "id": "decision:D22"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Halvard Freight Rail (D23)",
+        "decision_id": "D23",
+        "entity": "Halvard Freight Rail",
+        "action": "Hold",
+        "timestamp": "2023-10-23T10:00:00+00:00",
+        "rationale": "The battery locomotive pilot beat its targets through the winter, and Halvard plans to order 40 more units built on Solvane Energy Storage packs. Solvane's own margin problems add delivery risk, so we are holding rather than adding.",
+        "outcome": "+6%.",
+        "id": "decision:D23"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Tessellate Data Systems (D24)",
+        "decision_id": "D24",
+        "entity": "Tessellate Data Systems",
+        "action": "Hold",
+        "timestamp": "2023-11-03T14:00:00+00:00",
+        "rationale": "Tessellate is growing steadily at 34%, but its 5G backhaul tests suggest it may move traffic off Orbitra Networks. That would raise costs in the short term but reduce its reliance on a single supplier. Holding.",
+        "outcome": "+4%.",
+        "id": "decision:D24"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Kestrion Avionics (D25)",
+        "decision_id": "D25",
+        "entity": "Kestrion Avionics",
+        "action": "Buy",
+        "timestamp": "2023-11-13T10:00:00+00:00",
+        "rationale": "Adding to Kestrion. The second airframer's regional jet entered flight testing on schedule, and Kestrion's software content per aircraft is 30% higher than on its older programme.",
+        "outcome": "+15%.",
+        "id": "decision:D25"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Thistledown Foods (D26)",
+        "decision_id": "D26",
+        "entity": "Thistledown Foods",
+        "action": "Sell",
+        "timestamp": "2023-11-23T14:00:00+00:00",
+        "rationale": "Selling Thistledown. Northvale Grocers filed for bankruptcy, and Thistledown will write off about $40 million of receivables and lose shelf space as Northvale closes stores. The customer concentration risk has now played out.",
+        "outcome": "Fell 17%, then recovered within five months.",
+        "id": "decision:D26"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Solvane Energy Storage (D27)",
+        "decision_id": "D27",
+        "entity": "Solvane Energy Storage",
+        "action": "Buy",
+        "timestamp": "2023-12-04T10:00:00+00:00",
+        "rationale": "Reversing our D20 exit. Lithium prices are down 35% from their peak, the fixed-price contracts that hurt margins have rolled off, and Halvard Freight Rail's 40-locomotive order opens a new rail market. Buying at $41.",
+        "outcome": "+33% in six months.",
+        "id": "decision:D27"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Orbitra Networks (D28)",
+        "decision_id": "D28",
+        "entity": "Orbitra Networks",
+        "action": "Sell",
+        "timestamp": "2023-12-15T14:00:00+00:00",
+        "rationale": "Cutting Orbitra by two-thirds. Tessellate Data Systems moved 40% of its traffic to terrestrial 5G, a quarter after Orbitra's CFO called the contract fully secure. Management's credibility has taken a real hit.",
+        "outcome": "Fell 30% over three months.",
+        "id": "decision:D28"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Tessellate Data Systems (D29)",
+        "decision_id": "D29",
+        "entity": "Tessellate Data Systems",
+        "action": "Hold",
+        "timestamp": "2023-12-25T10:00:00+00:00",
+        "rationale": "Tessellate's move to 5G backhaul raised short-term costs and cut gross margin to 66%, but it ended its reliance on Orbitra Networks as a single supplier. Holding, since the move makes the business more resilient.",
+        "outcome": "+9%.",
+        "id": "decision:D29"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Corvex Payments (D30)",
+        "decision_id": "D30",
+        "entity": "Corvex Payments",
+        "action": "Pass",
+        "timestamp": "2024-01-04T14:00:00+00:00",
+        "rationale": "Corvex is down 55% from our exit and looks cheap, but the restatement review is still open and the board has not replaced the CEO and CFO who approved the old accounting. Passing until there is new leadership.",
+        "outcome": "Fell another 15%.",
+        "id": "decision:D30"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Halvard Freight Rail (D31)",
+        "decision_id": "D31",
+        "entity": "Halvard Freight Rail",
+        "action": "Sell",
+        "timestamp": "2024-01-15T10:00:00+00:00",
+        "rationale": "Exiting Halvard. Grainline Cooperative, which ships 31% of Halvard's volume, will run its own rail fleet from next year. Management knew the talks were under way and still guided for volume growth, so we no longer trust its guidance.",
+        "outcome": "Fell 26% over two months.",
+        "id": "decision:D31"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Pinehollow Biologics (D32)",
+        "decision_id": "D32",
+        "entity": "Pinehollow Biologics",
+        "action": "Buy",
+        "timestamp": "2024-01-26T14:00:00+00:00",
+        "rationale": "Adding to Pinehollow ahead of the Phase 3 readout. A competitor's similar antibody passed its own Phase 3 trial, which lowers the biological risk, and enrollment and dropout rates match the Phase 2 study.",
+        "outcome": "+10% into the readout.",
+        "id": "decision:D32"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Kestrion Avionics (D33)",
+        "decision_id": "D33",
+        "entity": "Kestrion Avionics",
+        "action": "Hold",
+        "timestamp": "2024-02-05T10:00:00+00:00",
+        "rationale": "Certification of the regional jet has slipped six months because of a supplier issue unrelated to Kestrion. Revenue moves to the right, but the contract win stands. Holding.",
+        "outcome": "-7%.",
+        "id": "decision:D33"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Orbitra Networks (D34)",
+        "decision_id": "D34",
+        "entity": "Orbitra Networks",
+        "action": "Sell",
+        "timestamp": "2024-02-15T14:00:00+00:00",
+        "rationale": "Selling the rest of Orbitra. A short-seller report showed that Orbitra counted reserved but unused capacity as utilised, and the company has since confirmed it. After the overconfident Tessellate guidance, this ends our trust in management.",
+        "outcome": "Fell 48%.",
+        "id": "decision:D34"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Thistledown Foods (D35)",
+        "decision_id": "D35",
+        "entity": "Thistledown Foods",
+        "action": "Buy",
+        "timestamp": "2024-02-26T10:00:00+00:00",
+        "rationale": "Reversing our D26 sale. Thistledown replaced Northvale's shelf space through two national chains, and no single customer is now above 12% of sales. Buying at $38, below our original entry.",
+        "outcome": "+29% over nine months.",
+        "id": "decision:D35"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Tessellate Data Systems (D36)",
+        "decision_id": "D36",
+        "entity": "Tessellate Data Systems",
+        "action": "Buy",
+        "timestamp": "2024-03-08T14:00:00+00:00",
+        "rationale": "Adding to Tessellate. Leaving Orbitra Networks looks prescient after the short-seller report, and gross margin is back to 69% as 5G volumes grew. Its supply chain no longer depends on a single provider.",
+        "outcome": "+21%.",
+        "id": "decision:D36"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Corvex Payments (D37)",
+        "decision_id": "D37",
+        "entity": "Corvex Payments",
+        "action": "Pass",
+        "timestamp": "2024-03-18T10:00:00+00:00",
+        "rationale": "Corvex named an outside CEO, but the CFO who approved the old accounting remains. Still passing.",
+        "outcome": "+5%.",
+        "id": "decision:D37"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Solvane Energy Storage (D38)",
+        "decision_id": "D38",
+        "entity": "Solvane Energy Storage",
+        "action": "Hold",
+        "timestamp": "2024-03-28T14:00:00+00:00",
+        "rationale": "Solvane delivered the first 12 locomotive packs to Halvard Freight Rail on time, even though Halvard has lost Grainline's volume. Lithium prices remain low. Holding at a 25% gain.",
+        "outcome": "+8%.",
+        "id": "decision:D38"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Halvard Freight Rail (D39)",
+        "decision_id": "D39",
+        "entity": "Halvard Freight Rail",
+        "action": "Pass",
+        "timestamp": "2024-04-08T10:00:00+00:00",
+        "rationale": "Halvard trades 30% below our exit price and its battery fleet lowers costs, but the management team that hid the Grainline talks is still in place. After Corvex and Orbitra, we now require a leadership change before returning to any company that misled investors. Passing.",
+        "outcome": "+11%. A missed gain, but the rule held.",
+        "id": "decision:D39"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Kestrion Avionics (D40)",
+        "decision_id": "D40",
+        "entity": "Kestrion Avionics",
+        "action": "Hold",
+        "timestamp": "2024-04-19T14:00:00+00:00",
+        "rationale": "Certification is back on track for entry into service in the spring. The stock is up 40% since our D17 entry, so we are holding rather than adding.",
+        "outcome": "+9%.",
+        "id": "decision:D40"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Orbitra Networks (D41)",
+        "decision_id": "D41",
+        "entity": "Orbitra Networks",
+        "action": "Pass",
+        "timestamp": "2024-04-29T10:00:00+00:00",
+        "rationale": "Orbitra has restated its utilisation figures and trades at half of book value, but the same executives are in charge. Passing, in line with the leadership rule we set at D39.",
+        "outcome": "Fell 12%.",
+        "id": "decision:D41"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Pinehollow Biologics (D42)",
+        "decision_id": "D42",
+        "entity": "Pinehollow Biologics",
+        "action": "Sell",
+        "timestamp": "2024-05-09T14:00:00+00:00",
+        "rationale": "Selling Pinehollow. Phase 3 missed its primary endpoint at 16 weeks, and only the 52-week secondary endpoint was positive. Management had called the trial de-risked at its investor day, which damages its credibility.",
+        "outcome": "Fell 52% on the readout. We sold after the first 40% drop.",
+        "id": "decision:D42"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Solvane Energy Storage (D43)",
+        "decision_id": "D43",
+        "entity": "Solvane Energy Storage",
+        "action": "Sell",
+        "timestamp": "2024-05-20T10:00:00+00:00",
+        "rationale": "Exiting Solvane a second time. A utility customer disclosed a recall of Solvane battery modules for thermal faults that Solvane never mentioned in its filings. Hiding a recall is a credibility failure, and it puts the Halvard Freight Rail rollout at risk.",
+        "outcome": "Fell 35%.",
+        "id": "decision:D43"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Tessellate Data Systems (D44)",
+        "decision_id": "D44",
+        "entity": "Tessellate Data Systems",
+        "action": "Sell",
+        "timestamp": "2024-05-31T14:00:00+00:00",
+        "rationale": "Cutting Tessellate by a third after a 90% gain since our D5 entry. Fundamentals are strong, but at 18 times sales the stock is at the top of its peer range.",
+        "outcome": "Pulled back 15%, then recovered.",
+        "id": "decision:D44"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Corvex Payments (D45)",
+        "decision_id": "D45",
+        "entity": "Corvex Payments",
+        "action": "Buy",
+        "timestamp": "2024-06-10T10:00:00+00:00",
+        "rationale": "Buying Corvex again. The new CEO replaced the CFO and the head of revenue accounting, the restatement review closed with no further adjustments, and volume growth is back to 28%. This meets the leadership condition from D30 and D39. Buying at $21.",
+        "outcome": "+52% over the following year.",
+        "id": "decision:D45"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Thistledown Foods (D46)",
+        "decision_id": "D46",
+        "entity": "Thistledown Foods",
+        "action": "Hold",
+        "timestamp": "2024-06-20T14:00:00+00:00",
+        "rationale": "Thistledown's turnaround is working: volume is up 7% and margins are above where they were before the Northvale bankruptcy. Holding at a fair valuation.",
+        "outcome": "+6%.",
+        "id": "decision:D46"
+      },
+      {
+        "type": "decision",
+        "label": "Sell Kestrion Avionics (D47)",
+        "decision_id": "D47",
+        "entity": "Kestrion Avionics",
+        "action": "Sell",
+        "timestamp": "2024-07-01T10:00:00+00:00",
+        "rationale": "Selling Kestrion. The regional jet has entered service and the content story has played out. At 34 times earnings, the stock assumes a third airframer win that has not happened. Taking a 65% gain.",
+        "outcome": "Flat over the next six months.",
+        "id": "decision:D47"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Halvard Freight Rail (D48)",
+        "decision_id": "D48",
+        "entity": "Halvard Freight Rail",
+        "action": "Buy",
+        "timestamp": "2024-07-12T14:00:00+00:00",
+        "rationale": "Buying Halvard. The board replaced the CEO and the head of investor relations, which meets the leadership condition from D39. The battery fleet has cut fuel cost per ton-mile by 18%, and Halvard has qualified a second battery supplier after the Solvane Energy Storage recall.",
+        "outcome": "+22%.",
+        "id": "decision:D48"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Orbitra Networks (D49)",
+        "decision_id": "D49",
+        "entity": "Orbitra Networks",
+        "action": "Pass",
+        "timestamp": "2024-07-22T10:00:00+00:00",
+        "rationale": "Orbitra has a new CFO, but the CEO who oversaw the utilisation misstatement is still in place. Still passing.",
+        "outcome": "-6%.",
+        "id": "decision:D49"
+      },
+      {
+        "type": "decision",
+        "label": "Buy Tessellate Data Systems (D50)",
+        "decision_id": "D50",
+        "entity": "Tessellate Data Systems",
+        "action": "Buy",
+        "timestamp": "2024-08-01T14:00:00+00:00",
+        "rationale": "Adding back to Tessellate after the pullback that followed our D44 trim. Growth has reaccelerated to 38%, and 5G backhaul now carries 70% of its traffic.",
+        "outcome": "+17%.",
+        "id": "decision:D50"
+      },
+      {
+        "type": "decision",
+        "label": "Hold Corvex Payments (D51)",
+        "decision_id": "D51",
+        "entity": "Corvex Payments",
+        "action": "Hold",
+        "timestamp": "2024-08-12T10:00:00+00:00",
+        "rationale": "Corvex's first two quarters under the new team were clean, with growth at 29%, and the new CFO now publishes more detailed disclosures than the old team ever did. Holding.",
+        "outcome": "+9%.",
+        "id": "decision:D51"
+      },
+      {
+        "type": "decision",
+        "label": "Pass Pinehollow Biologics (D52)",
+        "decision_id": "D52",
+        "entity": "Pinehollow Biologics",
+        "action": "Pass",
+        "timestamp": "2024-08-23T14:00:00+00:00",
+        "rationale": "Pinehollow plans a new Phase 3 trial built around the 52-week endpoint and trades close to its cash value, but management has never explained why it called the first trial de-risked. Passing, in line with the leadership rule we set at D39.",
+        "outcome": "Flat.",
+        "id": "decision:D52"
+      },
+      {
+        "type": "factor",
+        "label": "revenue momentum",
+        "category": "fundamental",
+        "id": "factor:revenue_momentum"
+      },
+      {
+        "type": "factor",
+        "label": "merchant growth",
+        "category": "fundamental",
+        "id": "factor:merchant_growth"
+      },
+      {
+        "type": "factor",
+        "label": "management quality",
+        "category": "management",
+        "id": "factor:management_quality"
+      },
+      {
+        "type": "event",
+        "label": "card-network CTO hire",
+        "event_type": "management_change",
+        "id": "event:card-network_cto_hire"
+      },
+      {
+        "type": "factor",
+        "label": "satellite capacity",
+        "category": "fundamental",
+        "id": "factor:satellite_capacity"
+      },
+      {
+        "type": "factor",
+        "label": "revenue visibility",
+        "category": "fundamental",
+        "id": "factor:revenue_visibility"
+      },
+      {
+        "type": "event",
+        "label": "Tessellate backhaul contract",
+        "event_type": "contract",
+        "id": "event:tessellate_backhaul_contract"
+      },
+      {
+        "type": "factor",
+        "label": "leadership change",
+        "category": "management",
+        "id": "factor:leadership_change"
+      },
+      {
+        "type": "event",
+        "label": "founder-CEO retirement",
+        "event_type": "management_change",
+        "id": "event:founder-ceo_retirement"
+      },
+      {
+        "type": "factor",
+        "label": "lithium price",
+        "category": "macro",
+        "id": "factor:lithium_price"
+      },
+      {
+        "type": "factor",
+        "label": "gross margin",
+        "category": "fundamental",
+        "id": "factor:gross_margin"
+      },
+      {
+        "type": "factor",
+        "label": "activist catalyst",
+        "category": "catalyst",
+        "id": "factor:activist_catalyst"
+      },
+      {
+        "type": "event",
+        "label": "Ironbridge activist entry",
+        "event_type": "activist",
+        "id": "event:ironbridge_activist_entry"
+      },
+      {
+        "type": "factor",
+        "label": "backhaul cost",
+        "category": "fundamental",
+        "id": "factor:backhaul_cost"
+      },
+      {
+        "type": "factor",
+        "label": "net revenue retention",
+        "category": "fundamental",
+        "id": "factor:net_revenue_retention"
+      },
+      {
+        "type": "factor",
+        "label": "customer concentration",
+        "category": "risk",
+        "id": "factor:customer_concentration"
+      },
+      {
+        "type": "factor",
+        "label": "airframer delivery delays",
+        "category": "risk",
+        "id": "factor:airframer_delivery_delays"
+      },
+      {
+        "type": "factor",
+        "label": "product quality",
+        "category": "fundamental",
+        "id": "factor:product_quality"
+      },
+      {
+        "type": "factor",
+        "label": "cost leadership",
+        "category": "fundamental",
+        "id": "factor:cost_leadership"
+      },
+      {
+        "type": "factor",
+        "label": "fuel cost",
+        "category": "fundamental",
+        "id": "factor:fuel_cost"
+      },
+      {
+        "type": "event",
+        "label": "battery locomotive pilot",
+        "event_type": "contract",
+        "id": "event:battery_locomotive_pilot"
+      },
+      {
+        "type": "factor",
+        "label": "binary clinical risk",
+        "category": "risk",
+        "id": "factor:binary_clinical_risk"
+      },
+      {
+        "type": "factor",
+        "label": "financing risk",
+        "category": "risk",
+        "id": "factor:financing_risk"
+      },
+      {
+        "type": "event",
+        "label": "Phase 1 readout",
+        "event_type": "clinical_trial",
+        "id": "event:phase_1_readout"
+      },
+      {
+        "type": "factor",
+        "label": "execution",
+        "category": "fundamental",
+        "id": "factor:execution"
+      },
+      {
+        "type": "event",
+        "label": "third satellite launch",
+        "event_type": "market",
+        "id": "event:third_satellite_launch"
+      },
+      {
+        "type": "factor",
+        "label": "valuation",
+        "category": "valuation",
+        "id": "factor:valuation"
+      },
+      {
+        "type": "event",
+        "label": "Ironbridge board seats",
+        "event_type": "activist",
+        "id": "event:ironbridge_board_seats"
+      },
+      {
+        "type": "factor",
+        "label": "cost restructuring",
+        "category": "fundamental",
+        "id": "factor:cost_restructuring"
+      },
+      {
+        "type": "event",
+        "label": "new CEO appointment",
+        "event_type": "management_change",
+        "id": "event:new_ceo_appointment"
+      },
+      {
+        "type": "factor",
+        "label": "channel expansion",
+        "category": "fundamental",
+        "id": "factor:channel_expansion"
+      },
+      {
+        "type": "event",
+        "label": "telecom reseller agreements",
+        "event_type": "contract",
+        "id": "event:telecom_reseller_agreements"
+      },
+      {
+        "type": "event",
+        "label": "lithium supply cuts",
+        "event_type": "market",
+        "id": "event:lithium_supply_cuts"
+      },
+      {
+        "type": "factor",
+        "label": "volume decline",
+        "category": "fundamental",
+        "id": "factor:volume_decline"
+      },
+      {
+        "type": "factor",
+        "label": "pricing power",
+        "category": "fundamental",
+        "id": "factor:pricing_power"
+      },
+      {
+        "type": "event",
+        "label": "CTO departure",
+        "event_type": "management_change",
+        "id": "event:cto_departure"
+      },
+      {
+        "type": "event",
+        "label": "Phase 2 readout",
+        "event_type": "clinical_trial",
+        "id": "event:phase_2_readout"
+      },
+      {
+        "type": "event",
+        "label": "equity raise",
+        "event_type": "market",
+        "id": "event:equity_raise"
+      },
+      {
+        "type": "factor",
+        "label": "valuation pullback",
+        "category": "valuation",
+        "id": "factor:valuation_pullback"
+      },
+      {
+        "type": "event",
+        "label": "second airframer contract",
+        "event_type": "contract",
+        "id": "event:second_airframer_contract"
+      },
+      {
+        "type": "event",
+        "label": "Northvale Grocers late payments",
+        "event_type": "market",
+        "id": "event:northvale_grocers_late_payments"
+      },
+      {
+        "type": "factor",
+        "label": "competitive pressure",
+        "category": "risk",
+        "id": "factor:competitive_pressure"
+      },
+      {
+        "type": "event",
+        "label": "Tessellate 5G backhaul trial",
+        "event_type": "competitor",
+        "id": "event:tessellate_5g_backhaul_trial"
+      },
+      {
+        "type": "factor",
+        "label": "activist exit",
+        "category": "catalyst",
+        "id": "factor:activist_exit"
+      },
+      {
+        "type": "event",
+        "label": "Ironbridge activist exit",
+        "event_type": "activist",
+        "id": "event:ironbridge_activist_exit"
+      },
+      {
+        "type": "event",
+        "label": "residential-unit sale collapse",
+        "event_type": "market",
+        "id": "event:residential-unit_sale_collapse"
+      },
+      {
+        "type": "event",
+        "label": "Phase 3 enrollment completion",
+        "event_type": "clinical_trial",
+        "id": "event:phase_3_enrollment_completion"
+      },
+      {
+        "type": "factor",
+        "label": "management credibility",
+        "category": "management",
+        "id": "factor:management_credibility"
+      },
+      {
+        "type": "factor",
+        "label": "accounting quality",
+        "category": "risk",
+        "id": "factor:accounting_quality"
+      },
+      {
+        "type": "event",
+        "label": "revenue restatement",
+        "event_type": "accounting",
+        "id": "event:revenue_restatement"
+      },
+      {
+        "type": "factor",
+        "label": "supplier dependence",
+        "category": "risk",
+        "id": "factor:supplier_dependence"
+      },
+      {
+        "type": "event",
+        "label": "40-locomotive order",
+        "event_type": "contract",
+        "id": "event:40-locomotive_order"
+      },
+      {
+        "type": "factor",
+        "label": "content per aircraft",
+        "category": "fundamental",
+        "id": "factor:content_per_aircraft"
+      },
+      {
+        "type": "event",
+        "label": "regional jet flight testing",
+        "event_type": "market",
+        "id": "event:regional_jet_flight_testing"
+      },
+      {
+        "type": "factor",
+        "label": "receivables write-off",
+        "category": "fundamental",
+        "id": "factor:receivables_write-off"
+      },
+      {
+        "type": "event",
+        "label": "Northvale Grocers bankruptcy",
+        "event_type": "market",
+        "id": "event:northvale_grocers_bankruptcy"
+      },
+      {
+        "type": "factor",
+        "label": "new market entry",
+        "category": "catalyst",
+        "id": "factor:new_market_entry"
+      },
+      {
+        "type": "event",
+        "label": "Halvard locomotive order",
+        "event_type": "contract",
+        "id": "event:halvard_locomotive_order"
+      },
+      {
+        "type": "event",
+        "label": "Tessellate traffic shift",
+        "event_type": "competitor",
+        "id": "event:tessellate_traffic_shift"
+      },
+      {
+        "type": "event",
+        "label": "5G backhaul migration",
+        "event_type": "market",
+        "id": "event:5g_backhaul_migration"
+      },
+      {
+        "type": "event",
+        "label": "restatement review",
+        "event_type": "accounting",
+        "id": "event:restatement_review"
+      },
+      {
+        "type": "event",
+        "label": "Grainline in-house fleet",
+        "event_type": "competitor",
+        "id": "event:grainline_in-house_fleet"
+      },
+      {
+        "type": "factor",
+        "label": "competitor validation",
+        "category": "catalyst",
+        "id": "factor:competitor_validation"
+      },
+      {
+        "type": "event",
+        "label": "competitor Phase 3 success",
+        "event_type": "competitor",
+        "id": "event:competitor_phase_3_success"
+      },
+      {
+        "type": "factor",
+        "label": "certification delay",
+        "category": "risk",
+        "id": "factor:certification_delay"
+      },
+      {
+        "type": "event",
+        "label": "regional jet certification delay",
+        "event_type": "regulatory",
+        "id": "event:regional_jet_certification_delay"
+      },
+      {
+        "type": "event",
+        "label": "short-seller report",
+        "event_type": "market",
+        "id": "event:short-seller_report"
+      },
+      {
+        "type": "event",
+        "label": "utilisation restatement",
+        "event_type": "accounting",
+        "id": "event:utilisation_restatement"
+      },
+      {
+        "type": "event",
+        "label": "national chain distribution deals",
+        "event_type": "contract",
+        "id": "event:national_chain_distribution_deals"
+      },
+      {
+        "type": "event",
+        "label": "outside CEO appointment",
+        "event_type": "management_change",
+        "id": "event:outside_ceo_appointment"
+      },
+      {
+        "type": "event",
+        "label": "first locomotive pack deliveries",
+        "event_type": "contract",
+        "id": "event:first_locomotive_pack_deliveries"
+      },
+      {
+        "type": "factor",
+        "label": "certification progress",
+        "category": "fundamental",
+        "id": "factor:certification_progress"
+      },
+      {
+        "type": "event",
+        "label": "regional jet certification",
+        "event_type": "regulatory",
+        "id": "event:regional_jet_certification"
+      },
+      {
+        "type": "event",
+        "label": "Phase 3 readout",
+        "event_type": "clinical_trial",
+        "id": "event:phase_3_readout"
+      },
+      {
+        "type": "factor",
+        "label": "product safety",
+        "category": "risk",
+        "id": "factor:product_safety"
+      },
+      {
+        "type": "event",
+        "label": "battery module recall",
+        "event_type": "regulatory",
+        "id": "event:battery_module_recall"
+      },
+      {
+        "type": "event",
+        "label": "CFO replacement",
+        "event_type": "management_change",
+        "id": "event:cfo_replacement"
+      },
+      {
+        "type": "event",
+        "label": "restatement review closure",
+        "event_type": "accounting",
+        "id": "event:restatement_review_closure"
+      },
+      {
+        "type": "event",
+        "label": "regional jet entry into service",
+        "event_type": "market",
+        "id": "event:regional_jet_entry_into_service"
+      },
+      {
+        "type": "event",
+        "label": "CEO replacement",
+        "event_type": "management_change",
+        "id": "event:ceo_replacement"
+      },
+      {
+        "type": "event",
+        "label": "second battery supplier qualification",
+        "event_type": "contract",
+        "id": "event:second_battery_supplier_qualification"
+      },
+      {
+        "type": "event",
+        "label": "new CFO appointment",
+        "event_type": "management_change",
+        "id": "event:new_cfo_appointment"
+      },
+      {
+        "type": "factor",
+        "label": "disclosure quality",
+        "category": "management",
+        "id": "factor:disclosure_quality"
+      },
+      {
+        "type": "event",
+        "label": "new Phase 3 trial plan",
+        "event_type": "clinical_trial",
+        "id": "event:new_phase_3_trial_plan"
+      }
+    ],
+    "edges": [
+      {
+        "type": "about",
+        "source": "decision:D1",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "about",
+        "source": "decision:D2",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "references",
+        "reason": "The five-year Tessellate backhaul contract underpins Orbitra's revenue visibility.",
+        "source": "decision:D2",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "about",
+        "source": "decision:D3",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "about",
+        "source": "decision:D4",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "about",
+        "source": "decision:D5",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "references",
+        "reason": "Cheap satellite backhaul from Orbitra is the source of Tessellate's cost advantage.",
+        "source": "decision:D5",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D6",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "about",
+        "source": "decision:D7",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "references",
+        "reason": "Halvard's battery locomotive pilot runs on Solvane storage packs.",
+        "source": "decision:D7",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "about",
+        "source": "decision:D8",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "about",
+        "source": "decision:D9",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "Adding to the D2 position after the launch succeeded and the Tessellate contract went live.",
+        "source": "decision:D9",
+        "target": "decision:D2"
+      },
+      {
+        "type": "references",
+        "reason": "The Tessellate contract going live on schedule supports the thesis.",
+        "source": "decision:D9",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "about",
+        "source": "decision:D10",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "about",
+        "source": "decision:D11",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "The CEO appointment resolves the leadership uncertainty behind the D3 hold.",
+        "source": "decision:D11",
+        "target": "decision:D3"
+      },
+      {
+        "type": "about",
+        "source": "decision:D12",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "Adding to the D5 position as backhaul costs fall further.",
+        "source": "decision:D12",
+        "target": "decision:D5"
+      },
+      {
+        "type": "references",
+        "reason": "Orbitra's capacity expansion lowers Tessellate's backhaul cost by another 15%.",
+        "source": "decision:D12",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D13",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Halving the position held at D10 as input costs rise.",
+        "source": "decision:D13",
+        "target": "decision:D10"
+      },
+      {
+        "type": "about",
+        "source": "decision:D14",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "about",
+        "source": "decision:D15",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "about",
+        "source": "decision:D16",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "Strong Phase 2 data and new cash remove the reasons for the D8 pass.",
+        "source": "decision:D16",
+        "target": "decision:D8"
+      },
+      {
+        "type": "about",
+        "source": "decision:D17",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "The customer-concentration condition set at the D6 pass has been met.",
+        "source": "decision:D17",
+        "target": "decision:D6"
+      },
+      {
+        "type": "about",
+        "source": "decision:D18",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "about",
+        "source": "decision:D19",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "references",
+        "reason": "Tessellate, the anchor customer, is testing a terrestrial 5G alternative.",
+        "source": "decision:D19",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "about",
+        "source": "decision:D20",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Selling the rest of the position trimmed at D13; the D4 thesis no longer holds.",
+        "source": "decision:D20",
+        "target": "decision:D13"
+      },
+      {
+        "type": "about",
+        "source": "decision:D21",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "about",
+        "source": "decision:D22",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "The restatement confirms the concerns behind the D15 hold, so exit.",
+        "source": "decision:D22",
+        "target": "decision:D15"
+      },
+      {
+        "type": "about",
+        "source": "decision:D23",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "references",
+        "reason": "Halvard's locomotive order depends on Solvane, whose margin problems add delivery risk.",
+        "source": "decision:D23",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "about",
+        "source": "decision:D24",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "references",
+        "reason": "Tessellate may move traffic off Orbitra's satellite backhaul.",
+        "source": "decision:D24",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D25",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "Adding to the D17 position as the new program stays on schedule.",
+        "source": "decision:D25",
+        "target": "decision:D17"
+      },
+      {
+        "type": "about",
+        "source": "decision:D26",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "about",
+        "source": "decision:D27",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "Lower lithium prices and expired contracts undo the reasons for the D20 exit.",
+        "source": "decision:D27",
+        "target": "decision:D20"
+      },
+      {
+        "type": "references",
+        "reason": "Halvard's 40-locomotive order opens a rail market for Solvane.",
+        "source": "decision:D27",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "about",
+        "source": "decision:D28",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "The Tessellate risk flagged at D19 has materialised.",
+        "source": "decision:D28",
+        "target": "decision:D19"
+      },
+      {
+        "type": "references",
+        "reason": "Tessellate is diversifying away from Orbitra by moving 40% of its traffic to 5G.",
+        "source": "decision:D28",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "about",
+        "source": "decision:D29",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "references",
+        "reason": "Tessellate no longer depends on Orbitra as a single supplier.",
+        "source": "decision:D29",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D30",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "about",
+        "source": "decision:D31",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "about",
+        "source": "decision:D32",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Moving from the D21 hold to adding as the biological risk falls.",
+        "source": "decision:D32",
+        "target": "decision:D21"
+      },
+      {
+        "type": "about",
+        "source": "decision:D33",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "about",
+        "source": "decision:D34",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Selling the stake left after the D28 cut.",
+        "source": "decision:D34",
+        "target": "decision:D28"
+      },
+      {
+        "type": "references",
+        "reason": "The overconfident guidance on the Tessellate contract was the first credibility hit.",
+        "source": "decision:D34",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "about",
+        "source": "decision:D35",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "Lost shelf space has been replaced and concentration is low, undoing the D26 sale.",
+        "source": "decision:D35",
+        "target": "decision:D26"
+      },
+      {
+        "type": "about",
+        "source": "decision:D36",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The diversification judged positive at D29 has paid off.",
+        "source": "decision:D36",
+        "target": "decision:D29"
+      },
+      {
+        "type": "references",
+        "reason": "Leaving Orbitra looks prescient after the short-seller report.",
+        "source": "decision:D36",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D37",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The D30 pass stands because the CFO from the restatement era remains.",
+        "source": "decision:D37",
+        "target": "decision:D30"
+      },
+      {
+        "type": "about",
+        "source": "decision:D38",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "references",
+        "reason": "Solvane delivered Halvard's first locomotive packs on time.",
+        "source": "decision:D38",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "about",
+        "source": "decision:D39",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The management behind the D31 exit is still in place.",
+        "source": "decision:D39",
+        "target": "decision:D31"
+      },
+      {
+        "type": "references",
+        "reason": "Corvex is one of the credibility failures behind the new leadership rule.",
+        "source": "decision:D39",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "references",
+        "reason": "Orbitra is the other credibility failure behind the new leadership rule.",
+        "source": "decision:D39",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "about",
+        "source": "decision:D40",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "about",
+        "source": "decision:D41",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The D34 exit stands; the same executives are in charge.",
+        "source": "decision:D41",
+        "target": "decision:D34"
+      },
+      {
+        "type": "about",
+        "source": "decision:D42",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "The Phase 3 miss undoes the case for the D32 addition.",
+        "source": "decision:D42",
+        "target": "decision:D32"
+      },
+      {
+        "type": "about",
+        "source": "decision:D43",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Exiting the position held at D38 after an undisclosed recall.",
+        "source": "decision:D43",
+        "target": "decision:D38"
+      },
+      {
+        "type": "references",
+        "reason": "The recall puts the Halvard locomotive rollout at risk.",
+        "source": "decision:D43",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "about",
+        "source": "decision:D44",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Trimming the position built from D5 to D36 after a 90% gain.",
+        "source": "decision:D44",
+        "target": "decision:D36"
+      },
+      {
+        "type": "about",
+        "source": "decision:D45",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "New finance leadership meets the condition that kept the D37 pass in place.",
+        "source": "decision:D45",
+        "target": "decision:D37"
+      },
+      {
+        "type": "about",
+        "source": "decision:D46",
+        "target": "entity:thistledown_foods"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The turnaround bought at D35 is working.",
+        "source": "decision:D46",
+        "target": "decision:D35"
+      },
+      {
+        "type": "about",
+        "source": "decision:D47",
+        "target": "entity:kestrion_avionics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "updates",
+        "reason": "Exiting the position held at D40 now that the content story has played out.",
+        "source": "decision:D47",
+        "target": "decision:D40"
+      },
+      {
+        "type": "about",
+        "source": "decision:D48",
+        "target": "entity:halvard_freight_rail"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "The leadership change required at the D39 pass has happened.",
+        "source": "decision:D48",
+        "target": "decision:D39"
+      },
+      {
+        "type": "references",
+        "reason": "Halvard qualified a second battery supplier after the Solvane recall.",
+        "source": "decision:D48",
+        "target": "entity:solvane_energy_storage"
+      },
+      {
+        "type": "about",
+        "source": "decision:D49",
+        "target": "entity:orbitra_networks"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The D41 pass stands while the CEO remains.",
+        "source": "decision:D49",
+        "target": "decision:D41"
+      },
+      {
+        "type": "about",
+        "source": "decision:D50",
+        "target": "entity:tessellate_data_systems"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reverses",
+        "reason": "Buying back after the pullback that followed the D44 trim.",
+        "source": "decision:D50",
+        "target": "decision:D44"
+      },
+      {
+        "type": "about",
+        "source": "decision:D51",
+        "target": "entity:corvex_payments"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The re-entry at D45 is being confirmed by clean results.",
+        "source": "decision:D51",
+        "target": "decision:D45"
+      },
+      {
+        "type": "about",
+        "source": "decision:D52",
+        "target": "entity:pinehollow_biologics"
+      },
+      {
+        "type": "reverses",
+        "reversal_type": "reinforces",
+        "reason": "The D42 exit stands; management has not addressed its earlier claims.",
+        "source": "decision:D52",
+        "target": "decision:D42"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D1"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D3"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D15"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D22"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D24"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D44"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D45"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D46"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D50"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_momentum",
+        "target": "decision:D51"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:merchant_growth",
+        "target": "decision:D1"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "management",
+        "source": "factor:management_quality",
+        "target": "decision:D1"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_quality",
+        "target": "decision:D15"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:card-network_cto_hire",
+        "target": "decision:D1"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:satellite_capacity",
+        "target": "decision:D2"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:satellite_capacity",
+        "target": "decision:D9"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:revenue_visibility",
+        "target": "decision:D2"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:tessellate_backhaul_contract",
+        "target": "decision:D2"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D3"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D11"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D30"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D37"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D39"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D41"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D45"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D48"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:leadership_change",
+        "target": "decision:D49"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:founder-ceo_retirement",
+        "target": "decision:D3"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "macro",
+        "source": "factor:lithium_price",
+        "target": "decision:D4"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "macro",
+        "source": "factor:lithium_price",
+        "target": "decision:D13"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "macro",
+        "source": "factor:lithium_price",
+        "target": "decision:D20"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "macro",
+        "source": "factor:lithium_price",
+        "target": "decision:D27"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "macro",
+        "source": "factor:lithium_price",
+        "target": "decision:D38"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D4"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D5"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D10"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D13"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D27"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D29"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D36"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:gross_margin",
+        "target": "decision:D46"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "catalyst",
+        "source": "factor:activist_catalyst",
+        "target": "decision:D4"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "catalyst",
+        "source": "factor:activist_catalyst",
+        "target": "decision:D10"
+      },
+      {
+        "type": "influenced",
+        "event_type": "activist",
+        "source": "event:ironbridge_activist_entry",
+        "target": "decision:D4"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:backhaul_cost",
+        "target": "decision:D5"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:backhaul_cost",
+        "target": "decision:D12"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:net_revenue_retention",
+        "target": "decision:D5"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D6"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D17"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D18"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D19"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D26"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D28"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D31"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:customer_concentration",
+        "target": "decision:D35"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:airframer_delivery_delays",
+        "target": "decision:D6"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:product_quality",
+        "target": "decision:D6"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:cost_leadership",
+        "target": "decision:D7"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:fuel_cost",
+        "target": "decision:D7"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:fuel_cost",
+        "target": "decision:D23"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:fuel_cost",
+        "target": "decision:D48"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:battery_locomotive_pilot",
+        "target": "decision:D7"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:battery_locomotive_pilot",
+        "target": "decision:D14"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D8"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D16"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "neutral",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D21"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D32"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D42"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:binary_clinical_risk",
+        "target": "decision:D52"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:financing_risk",
+        "target": "decision:D8"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:financing_risk",
+        "target": "decision:D16"
+      },
+      {
+        "type": "influenced",
+        "event_type": "clinical_trial",
+        "source": "event:phase_1_readout",
+        "target": "decision:D8"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:execution",
+        "target": "decision:D9"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:execution",
+        "target": "decision:D25"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:execution",
+        "target": "decision:D38"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:third_satellite_launch",
+        "target": "decision:D9"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "valuation",
+        "source": "factor:valuation",
+        "target": "decision:D10"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "valuation",
+        "source": "factor:valuation",
+        "target": "decision:D21"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "valuation",
+        "source": "factor:valuation",
+        "target": "decision:D40"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "valuation",
+        "source": "factor:valuation",
+        "target": "decision:D44"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "valuation",
+        "source": "factor:valuation",
+        "target": "decision:D47"
+      },
+      {
+        "type": "influenced",
+        "event_type": "activist",
+        "source": "event:ironbridge_board_seats",
+        "target": "decision:D10"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:cost_restructuring",
+        "target": "decision:D11"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:cost_restructuring",
+        "target": "decision:D18"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:new_ceo_appointment",
+        "target": "decision:D11"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:channel_expansion",
+        "target": "decision:D12"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:telecom_reseller_agreements",
+        "target": "decision:D12"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:lithium_supply_cuts",
+        "target": "decision:D13"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:volume_decline",
+        "target": "decision:D14"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:pricing_power",
+        "target": "decision:D14"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:cto_departure",
+        "target": "decision:D15"
+      },
+      {
+        "type": "influenced",
+        "event_type": "clinical_trial",
+        "source": "event:phase_2_readout",
+        "target": "decision:D16"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:equity_raise",
+        "target": "decision:D16"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D17"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D30"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D35"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D39"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D41"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D50"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "valuation",
+        "source": "factor:valuation_pullback",
+        "target": "decision:D52"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:second_airframer_contract",
+        "target": "decision:D17"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:northvale_grocers_late_payments",
+        "target": "decision:D18"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:competitive_pressure",
+        "target": "decision:D19"
+      },
+      {
+        "type": "influenced",
+        "event_type": "competitor",
+        "source": "event:tessellate_5g_backhaul_trial",
+        "target": "decision:D19"
+      },
+      {
+        "type": "influenced",
+        "event_type": "competitor",
+        "source": "event:tessellate_5g_backhaul_trial",
+        "target": "decision:D24"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "catalyst",
+        "source": "factor:activist_exit",
+        "target": "decision:D20"
+      },
+      {
+        "type": "influenced",
+        "event_type": "activist",
+        "source": "event:ironbridge_activist_exit",
+        "target": "decision:D20"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:residential-unit_sale_collapse",
+        "target": "decision:D20"
+      },
+      {
+        "type": "influenced",
+        "event_type": "clinical_trial",
+        "source": "event:phase_3_enrollment_completion",
+        "target": "decision:D21"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D22"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D28"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D30"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D31"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D34"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D37"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D39"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D41"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D42"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D43"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D49"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "management",
+        "source": "factor:management_credibility",
+        "target": "decision:D52"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:accounting_quality",
+        "target": "decision:D22"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:accounting_quality",
+        "target": "decision:D34"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:accounting_quality",
+        "target": "decision:D45"
+      },
+      {
+        "type": "influenced",
+        "event_type": "accounting",
+        "source": "event:revenue_restatement",
+        "target": "decision:D22"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:supplier_dependence",
+        "target": "decision:D23"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "neutral",
+        "category": "risk",
+        "source": "factor:supplier_dependence",
+        "target": "decision:D24"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:supplier_dependence",
+        "target": "decision:D29"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:supplier_dependence",
+        "target": "decision:D36"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "risk",
+        "source": "factor:supplier_dependence",
+        "target": "decision:D48"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:40-locomotive_order",
+        "target": "decision:D23"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:content_per_aircraft",
+        "target": "decision:D25"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:content_per_aircraft",
+        "target": "decision:D33"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "neutral",
+        "category": "fundamental",
+        "source": "factor:content_per_aircraft",
+        "target": "decision:D47"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:regional_jet_flight_testing",
+        "target": "decision:D25"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "fundamental",
+        "source": "factor:receivables_write-off",
+        "target": "decision:D26"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:northvale_grocers_bankruptcy",
+        "target": "decision:D26"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "catalyst",
+        "source": "factor:new_market_entry",
+        "target": "decision:D27"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:halvard_locomotive_order",
+        "target": "decision:D27"
+      },
+      {
+        "type": "influenced",
+        "event_type": "competitor",
+        "source": "event:tessellate_traffic_shift",
+        "target": "decision:D28"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:5g_backhaul_migration",
+        "target": "decision:D29"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:5g_backhaul_migration",
+        "target": "decision:D36"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:5g_backhaul_migration",
+        "target": "decision:D50"
+      },
+      {
+        "type": "influenced",
+        "event_type": "accounting",
+        "source": "event:restatement_review",
+        "target": "decision:D30"
+      },
+      {
+        "type": "influenced",
+        "event_type": "competitor",
+        "source": "event:grainline_in-house_fleet",
+        "target": "decision:D31"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "catalyst",
+        "source": "factor:competitor_validation",
+        "target": "decision:D32"
+      },
+      {
+        "type": "influenced",
+        "event_type": "competitor",
+        "source": "event:competitor_phase_3_success",
+        "target": "decision:D32"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:certification_delay",
+        "target": "decision:D33"
+      },
+      {
+        "type": "influenced",
+        "event_type": "regulatory",
+        "source": "event:regional_jet_certification_delay",
+        "target": "decision:D33"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:short-seller_report",
+        "target": "decision:D34"
+      },
+      {
+        "type": "influenced",
+        "event_type": "accounting",
+        "source": "event:utilisation_restatement",
+        "target": "decision:D34"
+      },
+      {
+        "type": "influenced",
+        "event_type": "accounting",
+        "source": "event:utilisation_restatement",
+        "target": "decision:D41"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:national_chain_distribution_deals",
+        "target": "decision:D35"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:outside_ceo_appointment",
+        "target": "decision:D37"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:first_locomotive_pack_deliveries",
+        "target": "decision:D38"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "fundamental",
+        "source": "factor:certification_progress",
+        "target": "decision:D40"
+      },
+      {
+        "type": "influenced",
+        "event_type": "regulatory",
+        "source": "event:regional_jet_certification",
+        "target": "decision:D40"
+      },
+      {
+        "type": "influenced",
+        "event_type": "clinical_trial",
+        "source": "event:phase_3_readout",
+        "target": "decision:D42"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "negative",
+        "category": "risk",
+        "source": "factor:product_safety",
+        "target": "decision:D43"
+      },
+      {
+        "type": "influenced",
+        "event_type": "regulatory",
+        "source": "event:battery_module_recall",
+        "target": "decision:D43"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:cfo_replacement",
+        "target": "decision:D45"
+      },
+      {
+        "type": "influenced",
+        "event_type": "accounting",
+        "source": "event:restatement_review_closure",
+        "target": "decision:D45"
+      },
+      {
+        "type": "influenced",
+        "event_type": "market",
+        "source": "event:regional_jet_entry_into_service",
+        "target": "decision:D47"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:ceo_replacement",
+        "target": "decision:D48"
+      },
+      {
+        "type": "influenced",
+        "event_type": "contract",
+        "source": "event:second_battery_supplier_qualification",
+        "target": "decision:D48"
+      },
+      {
+        "type": "influenced",
+        "event_type": "management_change",
+        "source": "event:new_cfo_appointment",
+        "target": "decision:D49"
+      },
+      {
+        "type": "influenced",
+        "sentiment": "positive",
+        "category": "management",
+        "source": "factor:disclosure_quality",
+        "target": "decision:D51"
+      },
+      {
+        "type": "influenced",
+        "event_type": "clinical_trial",
+        "source": "event:new_phase_3_trial_plan",
+        "target": "decision:D52"
+      }
+    ]
+  }
+}

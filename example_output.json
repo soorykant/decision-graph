@@ -1,0 +1,2366 @@
+{
+  "run_metadata": {
+    "generated_at": "2026-11-16T00:34:29.043993",
+    "dataset": "decisions.json",
+    "extraction_source": "hand-written (extractions.json)",
+    "extraction_time_seconds": 0.0,
+    "graph_stats": {
+      "total_nodes": 144,
+      "total_edges": 267,
+      "node_type_counts": {
+        "decision": 52,
+        "entity": 8,
+        "factor": 38,
+        "event": 46
+      },
+      "edge_type_counts": {
+        "about": 52,
+        "references": 18,
+        "reverses": 29,
+        "influenced": 168
+      },
+      "entities": [
+        "Corvex Payments",
+        "Orbitra Networks",
+        "Thistledown Foods",
+        "Solvane Energy Storage",
+        "Tessellate Data Systems",
+        "Kestrion Avionics",
+        "Halvard Freight Rail",
+        "Pinehollow Biologics"
+      ]
+    }
+  },
+  "graph_summary": "Graph: 144 nodes, 267 edges\nNodes: {'decision': 52, 'entity': 8, 'factor': 38, 'event': 46}\nEdges: {'about': 52, 'references': 18, 'reverses': 29, 'influenced': 168}",
+  "queries": {
+    "factors_buy": {
+      "query": "Factors driving Buy decisions",
+      "decision_type": "Buy",
+      "decision_count": 18,
+      "factors": [
+        {
+          "factor": "gross margin",
+          "category": "fundamental",
+          "decision_count": 4,
+          "influenced_decisions": [
+            "D27",
+            "D36",
+            "D4",
+            "D5"
+          ]
+        },
+        {
+          "factor": "revenue momentum",
+          "category": "fundamental",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D1",
+            "D45",
+            "D50"
+          ]
+        },
+        {
+          "factor": "leadership change",
+          "category": "management",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D11",
+            "D45",
+            "D48"
+          ]
+        },
+        {
+          "factor": "valuation pullback",
+          "category": "valuation",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D17",
+            "D35",
+            "D50"
+          ]
+        },
+        {
+          "factor": "satellite capacity",
+          "category": "fundamental",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D2",
+            "D9"
+          ]
+        },
+        {
+          "factor": "lithium price",
+          "category": "macro",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D27",
+            "D4"
+          ]
+        },
+        {
+          "factor": "backhaul cost",
+          "category": "fundamental",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D12",
+            "D5"
+          ]
+        },
+        {
+          "factor": "fuel cost",
+          "category": "fundamental",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D48",
+            "D7"
+          ]
+        },
+        {
+          "factor": "execution",
+          "category": "fundamental",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D25",
+            "D9"
+          ]
+        },
+        {
+          "factor": "binary clinical risk",
+          "category": "risk",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D16",
+            "D32"
+          ]
+        }
+      ],
+      "summary": "Across 18 Buy decisions, 'gross margin' was the most influential factor (appeared in 4 decisions)."
+    },
+    "factors_sell": {
+      "query": "Factors driving Sell decisions",
+      "decision_type": "Sell",
+      "decision_count": 11,
+      "factors": [
+        {
+          "factor": "management credibility",
+          "category": "management",
+          "decision_count": 6,
+          "influenced_decisions": [
+            "D22",
+            "D28",
+            "D31",
+            "D34",
+            "D42",
+            "D43"
+          ]
+        },
+        {
+          "factor": "customer concentration",
+          "category": "risk",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D26",
+            "D28",
+            "D31"
+          ]
+        },
+        {
+          "factor": "lithium price",
+          "category": "macro",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D13",
+            "D20"
+          ]
+        },
+        {
+          "factor": "revenue momentum",
+          "category": "fundamental",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D22",
+            "D44"
+          ]
+        },
+        {
+          "factor": "accounting quality",
+          "category": "risk",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D22",
+            "D34"
+          ]
+        },
+        {
+          "factor": "valuation",
+          "category": "valuation",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D44",
+            "D47"
+          ]
+        },
+        {
+          "factor": "gross margin",
+          "category": "fundamental",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D13"
+          ]
+        },
+        {
+          "factor": "activist exit",
+          "category": "catalyst",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D20"
+          ]
+        },
+        {
+          "factor": "receivables write-off",
+          "category": "fundamental",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D26"
+          ]
+        },
+        {
+          "factor": "binary clinical risk",
+          "category": "risk",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D42"
+          ]
+        }
+      ],
+      "summary": "Across 11 Sell decisions, 'management credibility' was the most influential factor (appeared in 6 decisions)."
+    },
+    "factors_hold": {
+      "query": "Factors driving Hold decisions",
+      "decision_type": "Hold",
+      "decision_count": 15,
+      "factors": [
+        {
+          "factor": "revenue momentum",
+          "category": "fundamental",
+          "decision_count": 5,
+          "influenced_decisions": [
+            "D15",
+            "D24",
+            "D3",
+            "D46",
+            "D51"
+          ]
+        },
+        {
+          "factor": "gross margin",
+          "category": "fundamental",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D10",
+            "D29",
+            "D46"
+          ]
+        },
+        {
+          "factor": "valuation",
+          "category": "valuation",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D10",
+            "D21",
+            "D40"
+          ]
+        },
+        {
+          "factor": "supplier dependence",
+          "category": "risk",
+          "decision_count": 3,
+          "influenced_decisions": [
+            "D23",
+            "D24",
+            "D29"
+          ]
+        },
+        {
+          "factor": "customer concentration",
+          "category": "risk",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D18",
+            "D19"
+          ]
+        },
+        {
+          "factor": "leadership change",
+          "category": "management",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D3"
+          ]
+        },
+        {
+          "factor": "activist catalyst",
+          "category": "catalyst",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D10"
+          ]
+        },
+        {
+          "factor": "volume decline",
+          "category": "fundamental",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D14"
+          ]
+        },
+        {
+          "factor": "pricing power",
+          "category": "fundamental",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D14"
+          ]
+        },
+        {
+          "factor": "management quality",
+          "category": "management",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D15"
+          ]
+        }
+      ],
+      "summary": "Across 15 Hold decisions, 'revenue momentum' was the most influential factor (appeared in 5 decisions)."
+    },
+    "factors_pass": {
+      "query": "Factors driving Pass decisions",
+      "decision_type": "Pass",
+      "decision_count": 8,
+      "factors": [
+        {
+          "factor": "management credibility",
+          "category": "management",
+          "decision_count": 6,
+          "influenced_decisions": [
+            "D30",
+            "D37",
+            "D39",
+            "D41",
+            "D49",
+            "D52"
+          ]
+        },
+        {
+          "factor": "leadership change",
+          "category": "management",
+          "decision_count": 5,
+          "influenced_decisions": [
+            "D30",
+            "D37",
+            "D39",
+            "D41",
+            "D49"
+          ]
+        },
+        {
+          "factor": "valuation pullback",
+          "category": "valuation",
+          "decision_count": 4,
+          "influenced_decisions": [
+            "D30",
+            "D39",
+            "D41",
+            "D52"
+          ]
+        },
+        {
+          "factor": "binary clinical risk",
+          "category": "risk",
+          "decision_count": 2,
+          "influenced_decisions": [
+            "D52",
+            "D8"
+          ]
+        },
+        {
+          "factor": "customer concentration",
+          "category": "risk",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D6"
+          ]
+        },
+        {
+          "factor": "airframer delivery delays",
+          "category": "risk",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D6"
+          ]
+        },
+        {
+          "factor": "product quality",
+          "category": "fundamental",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D6"
+          ]
+        },
+        {
+          "factor": "financing risk",
+          "category": "risk",
+          "decision_count": 1,
+          "influenced_decisions": [
+            "D8"
+          ]
+        }
+      ],
+      "summary": "Across 8 Pass decisions, 'management credibility' was the most influential factor (appeared in 6 decisions)."
+    },
+    "by_factor_management_credibility": {
+      "query": "Decisions influenced by 'management credibility'",
+      "matched_factors": [
+        "management credibility"
+      ],
+      "decision_count": 12,
+      "decisions": [
+        {
+          "decision_id": "D22",
+          "entity": "Corvex Payments",
+          "action": "Sell",
+          "timestamp": "2023-10-12T14:00:00+00:00",
+          "outcome": "Fell 41% over the following month. The exit avoided most of the drop.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D28",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2023-12-15T14:00:00+00:00",
+          "outcome": "Fell 30% over three months.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D30",
+          "entity": "Corvex Payments",
+          "action": "Pass",
+          "timestamp": "2024-01-04T14:00:00+00:00",
+          "outcome": "Fell another 15%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D31",
+          "entity": "Halvard Freight Rail",
+          "action": "Sell",
+          "timestamp": "2024-01-15T10:00:00+00:00",
+          "outcome": "Fell 26% over two months.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D34",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2024-02-15T14:00:00+00:00",
+          "outcome": "Fell 48%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D37",
+          "entity": "Corvex Payments",
+          "action": "Pass",
+          "timestamp": "2024-03-18T10:00:00+00:00",
+          "outcome": "+5%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D39",
+          "entity": "Halvard Freight Rail",
+          "action": "Pass",
+          "timestamp": "2024-04-08T10:00:00+00:00",
+          "outcome": "+11%. A missed gain, but the rule held.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D41",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-04-29T10:00:00+00:00",
+          "outcome": "Fell 12%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D42",
+          "entity": "Pinehollow Biologics",
+          "action": "Sell",
+          "timestamp": "2024-05-09T14:00:00+00:00",
+          "outcome": "Fell 52% on the readout. We sold after the first 40% drop.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D43",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2024-05-20T10:00:00+00:00",
+          "outcome": "Fell 35%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D49",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-07-22T10:00:00+00:00",
+          "outcome": "-6%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        },
+        {
+          "decision_id": "D52",
+          "entity": "Pinehollow Biologics",
+          "action": "Pass",
+          "timestamp": "2024-08-23T14:00:00+00:00",
+          "outcome": "Flat.",
+          "factor_sentiment": "negative",
+          "matched_factor": "management credibility"
+        }
+      ],
+      "action_breakdown": {
+        "Sell": 6,
+        "Pass": 6
+      },
+      "summary": "Factor 'management credibility' (matched: management credibility) influenced 12 decisions: 6 Pass, 6 Sell."
+    },
+    "by_factor_lithium_price": {
+      "query": "Decisions influenced by 'lithium price'",
+      "matched_factors": [
+        "lithium price"
+      ],
+      "decision_count": 5,
+      "decisions": [
+        {
+          "decision_id": "D4",
+          "entity": "Solvane Energy Storage",
+          "action": "Buy",
+          "timestamp": "2023-04-07T14:00:00+00:00",
+          "outcome": "+28% by September 2023 as margins expanded.",
+          "factor_sentiment": "positive",
+          "matched_factor": "lithium price"
+        },
+        {
+          "decision_id": "D13",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2023-07-10T10:00:00+00:00",
+          "outcome": "Fell 22% after the next earnings call. The trim avoided half the loss.",
+          "factor_sentiment": "negative",
+          "matched_factor": "lithium price"
+        },
+        {
+          "decision_id": "D20",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2023-09-22T14:00:00+00:00",
+          "outcome": "Fell another 25% over six months. Good exit.",
+          "factor_sentiment": "negative",
+          "matched_factor": "lithium price"
+        },
+        {
+          "decision_id": "D27",
+          "entity": "Solvane Energy Storage",
+          "action": "Buy",
+          "timestamp": "2023-12-04T10:00:00+00:00",
+          "outcome": "+33% in six months.",
+          "factor_sentiment": "positive",
+          "matched_factor": "lithium price"
+        },
+        {
+          "decision_id": "D38",
+          "entity": "Solvane Energy Storage",
+          "action": "Hold",
+          "timestamp": "2024-03-28T14:00:00+00:00",
+          "outcome": "+8%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "lithium price"
+        }
+      ],
+      "action_breakdown": {
+        "Buy": 2,
+        "Sell": 2,
+        "Hold": 1
+      },
+      "summary": "Factor 'lithium price' (matched: lithium price) influenced 5 decisions: 2 Buy, 1 Hold, 2 Sell."
+    },
+    "by_factor_revenue_momentum": {
+      "query": "Decisions influenced by 'revenue momentum'",
+      "matched_factors": [
+        "revenue momentum"
+      ],
+      "decision_count": 10,
+      "decisions": [
+        {
+          "decision_id": "D1",
+          "entity": "Corvex Payments",
+          "action": "Buy",
+          "timestamp": "2023-03-06T10:00:00+00:00",
+          "outcome": "Rose to $55 within four months. +45%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D3",
+          "entity": "Thistledown Foods",
+          "action": "Hold",
+          "timestamp": "2023-03-27T10:00:00+00:00",
+          "outcome": "Flat until the successor was named, then +12%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D15",
+          "entity": "Corvex Payments",
+          "action": "Hold",
+          "timestamp": "2023-07-31T10:00:00+00:00",
+          "outcome": "Drifted down 8%.",
+          "factor_sentiment": "negative",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D22",
+          "entity": "Corvex Payments",
+          "action": "Sell",
+          "timestamp": "2023-10-12T14:00:00+00:00",
+          "outcome": "Fell 41% over the following month. The exit avoided most of the drop.",
+          "factor_sentiment": "negative",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D24",
+          "entity": "Tessellate Data Systems",
+          "action": "Hold",
+          "timestamp": "2023-11-03T14:00:00+00:00",
+          "outcome": "+4%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D44",
+          "entity": "Tessellate Data Systems",
+          "action": "Sell",
+          "timestamp": "2024-05-31T14:00:00+00:00",
+          "outcome": "Pulled back 15%, then recovered.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D45",
+          "entity": "Corvex Payments",
+          "action": "Buy",
+          "timestamp": "2024-06-10T10:00:00+00:00",
+          "outcome": "+52% over the following year.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D46",
+          "entity": "Thistledown Foods",
+          "action": "Hold",
+          "timestamp": "2024-06-20T14:00:00+00:00",
+          "outcome": "+6%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D50",
+          "entity": "Tessellate Data Systems",
+          "action": "Buy",
+          "timestamp": "2024-08-01T14:00:00+00:00",
+          "outcome": "+17%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        },
+        {
+          "decision_id": "D51",
+          "entity": "Corvex Payments",
+          "action": "Hold",
+          "timestamp": "2024-08-12T10:00:00+00:00",
+          "outcome": "+9%.",
+          "factor_sentiment": "positive",
+          "matched_factor": "revenue momentum"
+        }
+      ],
+      "action_breakdown": {
+        "Buy": 3,
+        "Hold": 5,
+        "Sell": 2
+      },
+      "summary": "Factor 'revenue momentum' (matched: revenue momentum) influenced 10 decisions: 3 Buy, 5 Hold, 2 Sell."
+    },
+    "by_factor_customer_concentration": {
+      "query": "Decisions influenced by 'customer concentration'",
+      "matched_factors": [
+        "customer concentration"
+      ],
+      "decision_count": 8,
+      "decisions": [
+        {
+          "decision_id": "D6",
+          "entity": "Kestrion Avionics",
+          "action": "Pass",
+          "timestamp": "2023-04-27T14:00:00+00:00",
+          "outcome": "Fell 18% over the next quarter on delivery delays.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D17",
+          "entity": "Kestrion Avionics",
+          "action": "Buy",
+          "timestamp": "2023-08-21T10:00:00+00:00",
+          "outcome": "+38% over the next nine months.",
+          "factor_sentiment": "positive",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D18",
+          "entity": "Thistledown Foods",
+          "action": "Hold",
+          "timestamp": "2023-08-31T14:00:00+00:00",
+          "outcome": "Fell 9% as Northvale's problems grew.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D19",
+          "entity": "Orbitra Networks",
+          "action": "Hold",
+          "timestamp": "2023-09-11T10:00:00+00:00",
+          "outcome": "Flat.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D26",
+          "entity": "Thistledown Foods",
+          "action": "Sell",
+          "timestamp": "2023-11-23T14:00:00+00:00",
+          "outcome": "Fell 17%, then recovered within five months.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D28",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2023-12-15T14:00:00+00:00",
+          "outcome": "Fell 30% over three months.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D31",
+          "entity": "Halvard Freight Rail",
+          "action": "Sell",
+          "timestamp": "2024-01-15T10:00:00+00:00",
+          "outcome": "Fell 26% over two months.",
+          "factor_sentiment": "negative",
+          "matched_factor": "customer concentration"
+        },
+        {
+          "decision_id": "D35",
+          "entity": "Thistledown Foods",
+          "action": "Buy",
+          "timestamp": "2024-02-26T10:00:00+00:00",
+          "outcome": "+29% over nine months.",
+          "factor_sentiment": "positive",
+          "matched_factor": "customer concentration"
+        }
+      ],
+      "action_breakdown": {
+        "Pass": 1,
+        "Buy": 2,
+        "Hold": 2,
+        "Sell": 3
+      },
+      "summary": "Factor 'customer concentration' (matched: customer concentration) influenced 8 decisions: 2 Buy, 2 Hold, 1 Pass, 3 Sell."
+    },
+    "lineage_D22": {
+      "decision_id": "D22",
+      "decision": {
+        "action": "Sell",
+        "entity": "Corvex Payments",
+        "timestamp": "2023-10-12T14:00:00+00:00",
+        "rationale": "Exiting Corvex. The company restated two years of revenue after booking merchant cash advances as processing fees, which overstated growth by about 8 points. Together with the unexplained CTO exit behind our D15 hold, we no longer trust management's numbers.",
+        "outcome": "Fell 41% over the following month. The exit avoided most of the drop."
+      },
+      "upstream": [
+        {
+          "node_id": "factor:management_credibility",
+          "type": "factor",
+          "label": "management credibility",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "factor:revenue_momentum",
+          "type": "factor",
+          "label": "revenue momentum",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "fundamental",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "factor:accounting_quality",
+          "type": "factor",
+          "label": "accounting quality",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "event:revenue_restatement",
+          "type": "event",
+          "label": "revenue restatement",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "accounting"
+        }
+      ],
+      "downstream": [
+        {
+          "node_id": "decision:D15",
+          "type": "decision",
+          "label": "Hold Corvex Payments (D15)",
+          "action": "Hold",
+          "entity": "Corvex Payments",
+          "timestamp": "2023-07-31T10:00:00+00:00",
+          "reversal_type": "updates",
+          "reason": "The restatement confirms the concerns behind the D15 hold, so exit."
+        }
+      ],
+      "cross_references": [],
+      "summary": "Decision D22 (Sell Corvex Payments):\n  Driven by 3 factor(s): management credibility, revenue momentum, accounting quality.\n  Referenced events: revenue restatement.\n  1 related decision(s) found."
+    },
+    "lineage_D34": {
+      "decision_id": "D34",
+      "decision": {
+        "action": "Sell",
+        "entity": "Orbitra Networks",
+        "timestamp": "2024-02-15T14:00:00+00:00",
+        "rationale": "Selling the rest of Orbitra. A short-seller report showed that Orbitra counted reserved but unused capacity as utilised, and the company has since confirmed it. After the overconfident Tessellate guidance, this ends our trust in management.",
+        "outcome": "Fell 48%."
+      },
+      "upstream": [
+        {
+          "node_id": "factor:management_credibility",
+          "type": "factor",
+          "label": "management credibility",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "factor:accounting_quality",
+          "type": "factor",
+          "label": "accounting quality",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "event:short-seller_report",
+          "type": "event",
+          "label": "short-seller report",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "market"
+        },
+        {
+          "node_id": "event:utilisation_restatement",
+          "type": "event",
+          "label": "utilisation restatement",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "accounting"
+        },
+        {
+          "node_id": "decision:D41",
+          "type": "decision",
+          "label": "Pass Orbitra Networks (D41)",
+          "edge_type": "reverses",
+          "depth": 1,
+          "action": "Pass",
+          "entity": "Orbitra Networks",
+          "timestamp": "2024-04-29T10:00:00+00:00"
+        },
+        {
+          "node_id": "factor:leadership_change",
+          "type": "factor",
+          "label": "leadership change",
+          "edge_type": "influenced",
+          "depth": 2,
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "factor:valuation_pullback",
+          "type": "factor",
+          "label": "valuation pullback",
+          "edge_type": "influenced",
+          "depth": 2,
+          "category": "valuation",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "decision:D49",
+          "type": "decision",
+          "label": "Pass Orbitra Networks (D49)",
+          "edge_type": "reverses",
+          "depth": 2,
+          "action": "Pass",
+          "entity": "Orbitra Networks",
+          "timestamp": "2024-07-22T10:00:00+00:00"
+        },
+        {
+          "node_id": "event:new_cfo_appointment",
+          "type": "event",
+          "label": "new CFO appointment",
+          "edge_type": "influenced",
+          "depth": 3,
+          "event_type": "management_change"
+        }
+      ],
+      "downstream": [
+        {
+          "node_id": "decision:D28",
+          "type": "decision",
+          "label": "Sell Orbitra Networks (D28)",
+          "action": "Sell",
+          "entity": "Orbitra Networks",
+          "timestamp": "2023-12-15T14:00:00+00:00",
+          "reversal_type": "updates",
+          "reason": "Selling the stake left after the D28 cut."
+        },
+        {
+          "node_id": "decision:D41",
+          "type": "decision",
+          "label": "Pass Orbitra Networks (D41)",
+          "action": "Pass",
+          "entity": "Orbitra Networks",
+          "timestamp": "2024-04-29T10:00:00+00:00",
+          "reversal_type": "reinforces",
+          "reason": "The D34 exit stands; the same executives are in charge.",
+          "direction": "was_reversed_by"
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "The overconfident guidance on the Tessellate contract was the first credibility hit."
+        }
+      ],
+      "summary": "Decision D34 (Sell Orbitra Networks):\n  Driven by 4 factor(s): management credibility, accounting quality, leadership change, valuation pullback.\n  Referenced events: short-seller report, utilisation restatement, new CFO appointment.\n  2 related decision(s) found.\n  Cross-references: Tessellate Data Systems."
+    },
+    "lineage_D17": {
+      "decision_id": "D17",
+      "decision": {
+        "action": "Buy",
+        "entity": "Kestrion Avionics",
+        "timestamp": "2023-08-21T10:00:00+00:00",
+        "rationale": "Reversing our D6 pass. Kestrion won the flight-control contract for a second airframer's regional jet, which brings its largest customer down to 47% of revenue. The stock is also 20% cheaper than when we passed. Initiating at $52.",
+        "outcome": "+38% over the next nine months."
+      },
+      "upstream": [
+        {
+          "node_id": "factor:customer_concentration",
+          "type": "factor",
+          "label": "customer concentration",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "factor:valuation_pullback",
+          "type": "factor",
+          "label": "valuation pullback",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "valuation",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "event:second_airframer_contract",
+          "type": "event",
+          "label": "second airframer contract",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "contract"
+        },
+        {
+          "node_id": "decision:D25",
+          "type": "decision",
+          "label": "Buy Kestrion Avionics (D25)",
+          "edge_type": "reverses",
+          "depth": 1,
+          "action": "Buy",
+          "entity": "Kestrion Avionics",
+          "timestamp": "2023-11-13T10:00:00+00:00"
+        },
+        {
+          "node_id": "factor:content_per_aircraft",
+          "type": "factor",
+          "label": "content per aircraft",
+          "edge_type": "influenced",
+          "depth": 2,
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "factor:execution",
+          "type": "factor",
+          "label": "execution",
+          "edge_type": "influenced",
+          "depth": 2,
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "event:regional_jet_flight_testing",
+          "type": "event",
+          "label": "regional jet flight testing",
+          "edge_type": "influenced",
+          "depth": 2,
+          "event_type": "market"
+        }
+      ],
+      "downstream": [
+        {
+          "node_id": "decision:D6",
+          "type": "decision",
+          "label": "Pass Kestrion Avionics (D6)",
+          "action": "Pass",
+          "entity": "Kestrion Avionics",
+          "timestamp": "2023-04-27T14:00:00+00:00",
+          "reversal_type": "reverses",
+          "reason": "The customer-concentration condition set at the D6 pass has been met."
+        },
+        {
+          "node_id": "decision:D25",
+          "type": "decision",
+          "label": "Buy Kestrion Avionics (D25)",
+          "action": "Buy",
+          "entity": "Kestrion Avionics",
+          "timestamp": "2023-11-13T10:00:00+00:00",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D17 position as the new program stays on schedule.",
+          "direction": "was_reversed_by"
+        }
+      ],
+      "cross_references": [],
+      "summary": "Decision D17 (Buy Kestrion Avionics):\n  Driven by 4 factor(s): customer concentration, valuation pullback, content per aircraft, execution.\n  Referenced events: second airframer contract, regional jet flight testing.\n  2 related decision(s) found."
+    },
+    "lineage_D43": {
+      "decision_id": "D43",
+      "decision": {
+        "action": "Sell",
+        "entity": "Solvane Energy Storage",
+        "timestamp": "2024-05-20T10:00:00+00:00",
+        "rationale": "Exiting Solvane a second time. A utility customer disclosed a recall of Solvane battery modules for thermal faults that Solvane never mentioned in its filings. Hiding a recall is a credibility failure, and it puts the Halvard Freight Rail rollout at risk.",
+        "outcome": "Fell 35%."
+      },
+      "upstream": [
+        {
+          "node_id": "factor:management_credibility",
+          "type": "factor",
+          "label": "management credibility",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "factor:product_safety",
+          "type": "factor",
+          "label": "product safety",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "node_id": "event:battery_module_recall",
+          "type": "event",
+          "label": "battery module recall",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "regulatory"
+        }
+      ],
+      "downstream": [
+        {
+          "node_id": "decision:D38",
+          "type": "decision",
+          "label": "Hold Solvane Energy Storage (D38)",
+          "action": "Hold",
+          "entity": "Solvane Energy Storage",
+          "timestamp": "2024-03-28T14:00:00+00:00",
+          "reversal_type": "updates",
+          "reason": "Exiting the position held at D38 after an undisclosed recall."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Halvard Freight Rail",
+          "reason": "The recall puts the Halvard locomotive rollout at risk."
+        }
+      ],
+      "summary": "Decision D43 (Sell Solvane Energy Storage):\n  Driven by 2 factor(s): management credibility, product safety.\n  Referenced events: battery module recall.\n  1 related decision(s) found.\n  Cross-references: Halvard Freight Rail."
+    },
+    "lineage_D45": {
+      "decision_id": "D45",
+      "decision": {
+        "action": "Buy",
+        "entity": "Corvex Payments",
+        "timestamp": "2024-06-10T10:00:00+00:00",
+        "rationale": "Buying Corvex again. The new CEO replaced the CFO and the head of revenue accounting, the restatement review closed with no further adjustments, and volume growth is back to 28%. This meets the leadership condition from D30 and D39. Buying at $21.",
+        "outcome": "+52% over the following year."
+      },
+      "upstream": [
+        {
+          "node_id": "factor:leadership_change",
+          "type": "factor",
+          "label": "leadership change",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "management",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "factor:revenue_momentum",
+          "type": "factor",
+          "label": "revenue momentum",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "factor:accounting_quality",
+          "type": "factor",
+          "label": "accounting quality",
+          "edge_type": "influenced",
+          "depth": 1,
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "node_id": "event:cfo_replacement",
+          "type": "event",
+          "label": "CFO replacement",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "management_change"
+        },
+        {
+          "node_id": "event:restatement_review_closure",
+          "type": "event",
+          "label": "restatement review closure",
+          "edge_type": "influenced",
+          "depth": 1,
+          "event_type": "accounting"
+        },
+        {
+          "node_id": "decision:D51",
+          "type": "decision",
+          "label": "Hold Corvex Payments (D51)",
+          "edge_type": "reverses",
+          "depth": 1,
+          "action": "Hold",
+          "entity": "Corvex Payments",
+          "timestamp": "2024-08-12T10:00:00+00:00"
+        },
+        {
+          "node_id": "factor:disclosure_quality",
+          "type": "factor",
+          "label": "disclosure quality",
+          "edge_type": "influenced",
+          "depth": 2,
+          "category": "management",
+          "sentiment": "positive"
+        }
+      ],
+      "downstream": [
+        {
+          "node_id": "decision:D37",
+          "type": "decision",
+          "label": "Pass Corvex Payments (D37)",
+          "action": "Pass",
+          "entity": "Corvex Payments",
+          "timestamp": "2024-03-18T10:00:00+00:00",
+          "reversal_type": "reverses",
+          "reason": "New finance leadership meets the condition that kept the D37 pass in place."
+        },
+        {
+          "node_id": "decision:D51",
+          "type": "decision",
+          "label": "Hold Corvex Payments (D51)",
+          "action": "Hold",
+          "entity": "Corvex Payments",
+          "timestamp": "2024-08-12T10:00:00+00:00",
+          "reversal_type": "reinforces",
+          "reason": "The re-entry at D45 is being confirmed by clean results.",
+          "direction": "was_reversed_by"
+        }
+      ],
+      "cross_references": [],
+      "summary": "Decision D45 (Buy Corvex Payments):\n  Driven by 4 factor(s): leadership change, revenue momentum, accounting quality, disclosure quality.\n  Referenced events: CFO replacement, restatement review closure.\n  2 related decision(s) found."
+    },
+    "cross_entity_links": {
+      "query": "Cross-entity connections",
+      "total_connections": 28,
+      "connections": [
+        {
+          "entity_a": "Orbitra Networks",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "valuation pullback"
+          ],
+          "shared_events": [
+            "Tessellate 5G backhaul trial"
+          ],
+          "direct_references": [
+            {
+              "from_decision": "D2",
+              "reason": "The five-year Tessellate backhaul contract underpins Orbitra's revenue visibility."
+            },
+            {
+              "from_decision": "D5",
+              "reason": "Cheap satellite backhaul from Orbitra is the source of Tessellate's cost advantage."
+            },
+            {
+              "from_decision": "D9",
+              "reason": "The Tessellate contract going live on schedule supports the thesis."
+            },
+            {
+              "from_decision": "D12",
+              "reason": "Orbitra's capacity expansion lowers Tessellate's backhaul cost by another 15%."
+            },
+            {
+              "from_decision": "D19",
+              "reason": "Tessellate, the anchor customer, is testing a terrestrial 5G alternative."
+            },
+            {
+              "from_decision": "D24",
+              "reason": "Tessellate may move traffic off Orbitra's satellite backhaul."
+            },
+            {
+              "from_decision": "D28",
+              "reason": "Tessellate is diversifying away from Orbitra by moving 40% of its traffic to 5G."
+            },
+            {
+              "from_decision": "D29",
+              "reason": "Tessellate no longer depends on Orbitra as a single supplier."
+            },
+            {
+              "from_decision": "D34",
+              "reason": "The overconfident guidance on the Tessellate contract was the first credibility hit."
+            },
+            {
+              "from_decision": "D36",
+              "reason": "Leaving Orbitra looks prescient after the short-seller report."
+            }
+          ],
+          "connection_strength": 12
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Solvane Energy Storage",
+          "shared_factors": [
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [
+            {
+              "from_decision": "D7",
+              "reason": "Halvard's battery locomotive pilot runs on Solvane storage packs."
+            },
+            {
+              "from_decision": "D23",
+              "reason": "Halvard's locomotive order depends on Solvane, whose margin problems add delivery risk."
+            },
+            {
+              "from_decision": "D27",
+              "reason": "Halvard's 40-locomotive order opens a rail market for Solvane."
+            },
+            {
+              "from_decision": "D38",
+              "reason": "Solvane delivered Halvard's first locomotive packs on time."
+            },
+            {
+              "from_decision": "D43",
+              "reason": "The recall puts the Halvard locomotive rollout at risk."
+            },
+            {
+              "from_decision": "D48",
+              "reason": "Halvard qualified a second battery supplier after the Solvane recall."
+            }
+          ],
+          "connection_strength": 7
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Orbitra Networks",
+          "shared_factors": [
+            "leadership change",
+            "customer concentration",
+            "valuation pullback",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [
+            {
+              "from_decision": "D39",
+              "reason": "Orbitra is the other credibility failure behind the new leadership rule."
+            }
+          ],
+          "connection_strength": 5
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Halvard Freight Rail",
+          "shared_factors": [
+            "leadership change",
+            "valuation pullback",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [
+            {
+              "from_decision": "D39",
+              "reason": "Corvex is one of the credibility failures behind the new leadership rule."
+            }
+          ],
+          "connection_strength": 4
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Orbitra Networks",
+          "shared_factors": [
+            "leadership change",
+            "valuation pullback",
+            "management credibility",
+            "accounting quality"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 4
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "revenue momentum",
+            "leadership change",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 3
+        },
+        {
+          "entity_a": "Tessellate Data Systems",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "revenue momentum",
+            "gross margin",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 3
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "leadership change",
+            "customer concentration",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 3
+        },
+        {
+          "entity_a": "Orbitra Networks",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "leadership change",
+            "customer concentration",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 3
+        },
+        {
+          "entity_a": "Kestrion Avionics",
+          "entity_b": "Orbitra Networks",
+          "shared_factors": [
+            "customer concentration",
+            "execution",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 3
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "revenue momentum",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Solvane Energy Storage",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "gross margin",
+            "valuation"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Kestrion Avionics",
+          "shared_factors": [
+            "customer concentration",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Kestrion Avionics",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "customer concentration",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Kestrion Avionics",
+          "entity_b": "Solvane Energy Storage",
+          "shared_factors": [
+            "execution",
+            "valuation"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Orbitra Networks",
+          "entity_b": "Solvane Energy Storage",
+          "shared_factors": [
+            "execution",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Kestrion Avionics",
+          "entity_b": "Pinehollow Biologics",
+          "shared_factors": [
+            "valuation",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Kestrion Avionics",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "valuation",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Pinehollow Biologics",
+          "entity_b": "Solvane Energy Storage",
+          "shared_factors": [
+            "valuation",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Pinehollow Biologics",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "valuation",
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Pinehollow Biologics",
+          "shared_factors": [
+            "valuation pullback",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Pinehollow Biologics",
+          "shared_factors": [
+            "valuation pullback",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Halvard Freight Rail",
+          "entity_b": "Tessellate Data Systems",
+          "shared_factors": [
+            "valuation pullback",
+            "supplier dependence"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Orbitra Networks",
+          "entity_b": "Pinehollow Biologics",
+          "shared_factors": [
+            "valuation pullback",
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 2
+        },
+        {
+          "entity_a": "Solvane Energy Storage",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "gross margin"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 1
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Kestrion Avionics",
+          "shared_factors": [
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 1
+        },
+        {
+          "entity_a": "Pinehollow Biologics",
+          "entity_b": "Thistledown Foods",
+          "shared_factors": [
+            "valuation pullback"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 1
+        },
+        {
+          "entity_a": "Corvex Payments",
+          "entity_b": "Solvane Energy Storage",
+          "shared_factors": [
+            "management credibility"
+          ],
+          "shared_events": [],
+          "direct_references": [],
+          "connection_strength": 1
+        }
+      ],
+      "summary": "Found 28 entity pair connections. Strongest: Orbitra Networks \u2194 Tessellate Data Systems (12 shared signals)."
+    },
+    "all_reversals": {
+      "query": "All decision reversals",
+      "count": 29,
+      "reversals": [
+        {
+          "reversing_decision": "D9",
+          "reversing_action": "Buy",
+          "reversing_entity": "Orbitra Networks",
+          "reversing_timestamp": "2023-05-29T10:00:00+00:00",
+          "reversed_decision": "D2",
+          "reversed_action": "Buy",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D2 position after the launch succeeded and the Tessellate contract went live."
+        },
+        {
+          "reversing_decision": "D11",
+          "reversing_action": "Buy",
+          "reversing_entity": "Thistledown Foods",
+          "reversing_timestamp": "2023-06-19T10:00:00+00:00",
+          "reversed_decision": "D3",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "The CEO appointment resolves the leadership uncertainty behind the D3 hold."
+        },
+        {
+          "reversing_decision": "D12",
+          "reversing_action": "Buy",
+          "reversing_entity": "Tessellate Data Systems",
+          "reversing_timestamp": "2023-06-30T14:00:00+00:00",
+          "reversed_decision": "D5",
+          "reversed_action": "Buy",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D5 position as backhaul costs fall further."
+        },
+        {
+          "reversing_decision": "D13",
+          "reversing_action": "Sell",
+          "reversing_entity": "Solvane Energy Storage",
+          "reversing_timestamp": "2023-07-10T10:00:00+00:00",
+          "reversed_decision": "D10",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "Halving the position held at D10 as input costs rise."
+        },
+        {
+          "reversing_decision": "D16",
+          "reversing_action": "Buy",
+          "reversing_entity": "Pinehollow Biologics",
+          "reversing_timestamp": "2023-08-11T14:00:00+00:00",
+          "reversed_decision": "D8",
+          "reversed_action": "Pass",
+          "reversal_type": "reverses",
+          "reason": "Strong Phase 2 data and new cash remove the reasons for the D8 pass."
+        },
+        {
+          "reversing_decision": "D17",
+          "reversing_action": "Buy",
+          "reversing_entity": "Kestrion Avionics",
+          "reversing_timestamp": "2023-08-21T10:00:00+00:00",
+          "reversed_decision": "D6",
+          "reversed_action": "Pass",
+          "reversal_type": "reverses",
+          "reason": "The customer-concentration condition set at the D6 pass has been met."
+        },
+        {
+          "reversing_decision": "D20",
+          "reversing_action": "Sell",
+          "reversing_entity": "Solvane Energy Storage",
+          "reversing_timestamp": "2023-09-22T14:00:00+00:00",
+          "reversed_decision": "D13",
+          "reversed_action": "Sell",
+          "reversal_type": "updates",
+          "reason": "Selling the rest of the position trimmed at D13; the D4 thesis no longer holds."
+        },
+        {
+          "reversing_decision": "D22",
+          "reversing_action": "Sell",
+          "reversing_entity": "Corvex Payments",
+          "reversing_timestamp": "2023-10-12T14:00:00+00:00",
+          "reversed_decision": "D15",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "The restatement confirms the concerns behind the D15 hold, so exit."
+        },
+        {
+          "reversing_decision": "D25",
+          "reversing_action": "Buy",
+          "reversing_entity": "Kestrion Avionics",
+          "reversing_timestamp": "2023-11-13T10:00:00+00:00",
+          "reversed_decision": "D17",
+          "reversed_action": "Buy",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D17 position as the new program stays on schedule."
+        },
+        {
+          "reversing_decision": "D27",
+          "reversing_action": "Buy",
+          "reversing_entity": "Solvane Energy Storage",
+          "reversing_timestamp": "2023-12-04T10:00:00+00:00",
+          "reversed_decision": "D20",
+          "reversed_action": "Sell",
+          "reversal_type": "reverses",
+          "reason": "Lower lithium prices and expired contracts undo the reasons for the D20 exit."
+        },
+        {
+          "reversing_decision": "D28",
+          "reversing_action": "Sell",
+          "reversing_entity": "Orbitra Networks",
+          "reversing_timestamp": "2023-12-15T14:00:00+00:00",
+          "reversed_decision": "D19",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "The Tessellate risk flagged at D19 has materialised."
+        },
+        {
+          "reversing_decision": "D32",
+          "reversing_action": "Buy",
+          "reversing_entity": "Pinehollow Biologics",
+          "reversing_timestamp": "2024-01-26T14:00:00+00:00",
+          "reversed_decision": "D21",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "Moving from the D21 hold to adding as the biological risk falls."
+        },
+        {
+          "reversing_decision": "D34",
+          "reversing_action": "Sell",
+          "reversing_entity": "Orbitra Networks",
+          "reversing_timestamp": "2024-02-15T14:00:00+00:00",
+          "reversed_decision": "D28",
+          "reversed_action": "Sell",
+          "reversal_type": "updates",
+          "reason": "Selling the stake left after the D28 cut."
+        },
+        {
+          "reversing_decision": "D35",
+          "reversing_action": "Buy",
+          "reversing_entity": "Thistledown Foods",
+          "reversing_timestamp": "2024-02-26T10:00:00+00:00",
+          "reversed_decision": "D26",
+          "reversed_action": "Sell",
+          "reversal_type": "reverses",
+          "reason": "Lost shelf space has been replaced and concentration is low, undoing the D26 sale."
+        },
+        {
+          "reversing_decision": "D36",
+          "reversing_action": "Buy",
+          "reversing_entity": "Tessellate Data Systems",
+          "reversing_timestamp": "2024-03-08T14:00:00+00:00",
+          "reversed_decision": "D29",
+          "reversed_action": "Hold",
+          "reversal_type": "reinforces",
+          "reason": "The diversification judged positive at D29 has paid off."
+        },
+        {
+          "reversing_decision": "D37",
+          "reversing_action": "Pass",
+          "reversing_entity": "Corvex Payments",
+          "reversing_timestamp": "2024-03-18T10:00:00+00:00",
+          "reversed_decision": "D30",
+          "reversed_action": "Pass",
+          "reversal_type": "reinforces",
+          "reason": "The D30 pass stands because the CFO from the restatement era remains."
+        },
+        {
+          "reversing_decision": "D39",
+          "reversing_action": "Pass",
+          "reversing_entity": "Halvard Freight Rail",
+          "reversing_timestamp": "2024-04-08T10:00:00+00:00",
+          "reversed_decision": "D31",
+          "reversed_action": "Sell",
+          "reversal_type": "reinforces",
+          "reason": "The management behind the D31 exit is still in place."
+        },
+        {
+          "reversing_decision": "D41",
+          "reversing_action": "Pass",
+          "reversing_entity": "Orbitra Networks",
+          "reversing_timestamp": "2024-04-29T10:00:00+00:00",
+          "reversed_decision": "D34",
+          "reversed_action": "Sell",
+          "reversal_type": "reinforces",
+          "reason": "The D34 exit stands; the same executives are in charge."
+        },
+        {
+          "reversing_decision": "D42",
+          "reversing_action": "Sell",
+          "reversing_entity": "Pinehollow Biologics",
+          "reversing_timestamp": "2024-05-09T14:00:00+00:00",
+          "reversed_decision": "D32",
+          "reversed_action": "Buy",
+          "reversal_type": "updates",
+          "reason": "The Phase 3 miss undoes the case for the D32 addition."
+        },
+        {
+          "reversing_decision": "D43",
+          "reversing_action": "Sell",
+          "reversing_entity": "Solvane Energy Storage",
+          "reversing_timestamp": "2024-05-20T10:00:00+00:00",
+          "reversed_decision": "D38",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "Exiting the position held at D38 after an undisclosed recall."
+        },
+        {
+          "reversing_decision": "D44",
+          "reversing_action": "Sell",
+          "reversing_entity": "Tessellate Data Systems",
+          "reversing_timestamp": "2024-05-31T14:00:00+00:00",
+          "reversed_decision": "D36",
+          "reversed_action": "Buy",
+          "reversal_type": "updates",
+          "reason": "Trimming the position built from D5 to D36 after a 90% gain."
+        },
+        {
+          "reversing_decision": "D45",
+          "reversing_action": "Buy",
+          "reversing_entity": "Corvex Payments",
+          "reversing_timestamp": "2024-06-10T10:00:00+00:00",
+          "reversed_decision": "D37",
+          "reversed_action": "Pass",
+          "reversal_type": "reverses",
+          "reason": "New finance leadership meets the condition that kept the D37 pass in place."
+        },
+        {
+          "reversing_decision": "D46",
+          "reversing_action": "Hold",
+          "reversing_entity": "Thistledown Foods",
+          "reversing_timestamp": "2024-06-20T14:00:00+00:00",
+          "reversed_decision": "D35",
+          "reversed_action": "Buy",
+          "reversal_type": "reinforces",
+          "reason": "The turnaround bought at D35 is working."
+        },
+        {
+          "reversing_decision": "D47",
+          "reversing_action": "Sell",
+          "reversing_entity": "Kestrion Avionics",
+          "reversing_timestamp": "2024-07-01T10:00:00+00:00",
+          "reversed_decision": "D40",
+          "reversed_action": "Hold",
+          "reversal_type": "updates",
+          "reason": "Exiting the position held at D40 now that the content story has played out."
+        },
+        {
+          "reversing_decision": "D48",
+          "reversing_action": "Buy",
+          "reversing_entity": "Halvard Freight Rail",
+          "reversing_timestamp": "2024-07-12T14:00:00+00:00",
+          "reversed_decision": "D39",
+          "reversed_action": "Pass",
+          "reversal_type": "reverses",
+          "reason": "The leadership change required at the D39 pass has happened."
+        },
+        {
+          "reversing_decision": "D49",
+          "reversing_action": "Pass",
+          "reversing_entity": "Orbitra Networks",
+          "reversing_timestamp": "2024-07-22T10:00:00+00:00",
+          "reversed_decision": "D41",
+          "reversed_action": "Pass",
+          "reversal_type": "reinforces",
+          "reason": "The D41 pass stands while the CEO remains."
+        },
+        {
+          "reversing_decision": "D50",
+          "reversing_action": "Buy",
+          "reversing_entity": "Tessellate Data Systems",
+          "reversing_timestamp": "2024-08-01T14:00:00+00:00",
+          "reversed_decision": "D44",
+          "reversed_action": "Sell",
+          "reversal_type": "reverses",
+          "reason": "Buying back after the pullback that followed the D44 trim."
+        },
+        {
+          "reversing_decision": "D51",
+          "reversing_action": "Hold",
+          "reversing_entity": "Corvex Payments",
+          "reversing_timestamp": "2024-08-12T10:00:00+00:00",
+          "reversed_decision": "D45",
+          "reversed_action": "Buy",
+          "reversal_type": "reinforces",
+          "reason": "The re-entry at D45 is being confirmed by clean results."
+        },
+        {
+          "reversing_decision": "D52",
+          "reversing_action": "Pass",
+          "reversing_entity": "Pinehollow Biologics",
+          "reversing_timestamp": "2024-08-23T14:00:00+00:00",
+          "reversed_decision": "D42",
+          "reversed_action": "Sell",
+          "reversal_type": "reinforces",
+          "reason": "The D42 exit stands; management has not addressed its earlier claims."
+        }
+      ],
+      "summary": "Found 29 explicit decision reversal(s)."
+    },
+    "whatif_management_credibility": {
+      "matched_factors": [
+        "management credibility"
+      ],
+      "direct_decisions": [
+        {
+          "decision_id": "D22",
+          "entity": "Corvex Payments",
+          "action": "Sell",
+          "timestamp": "2023-10-12T14:00:00+00:00",
+          "rationale": "Exiting Corvex. The company restated two years of revenue after booking merchant cash advances as processing fees, which overstated growth by about 8 points. Together with the unexplained CTO exit behind our D15 hold, we no longer trust management's numbers.",
+          "outcome": "Fell 41% over the following month. The exit avoided most of the drop.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D28",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2023-12-15T14:00:00+00:00",
+          "rationale": "Cutting Orbitra by two-thirds. Tessellate Data Systems moved 40% of its traffic to terrestrial 5G, a quarter after Orbitra's CFO called the contract fully secure. Management's credibility has taken a real hit.",
+          "outcome": "Fell 30% over three months.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D30",
+          "entity": "Corvex Payments",
+          "action": "Pass",
+          "timestamp": "2024-01-04T14:00:00+00:00",
+          "rationale": "Corvex is down 55% from our exit and looks cheap, but the restatement review is still open and the board has not replaced the CEO and CFO who approved the old accounting. Passing until there is new leadership.",
+          "outcome": "Fell another 15%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D31",
+          "entity": "Halvard Freight Rail",
+          "action": "Sell",
+          "timestamp": "2024-01-15T10:00:00+00:00",
+          "rationale": "Exiting Halvard. Grainline Cooperative, which ships 31% of Halvard's volume, will run its own rail fleet from next year. Management knew the talks were under way and still guided for volume growth, so we no longer trust its guidance.",
+          "outcome": "Fell 26% over two months.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D34",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2024-02-15T14:00:00+00:00",
+          "rationale": "Selling the rest of Orbitra. A short-seller report showed that Orbitra counted reserved but unused capacity as utilised, and the company has since confirmed it. After the overconfident Tessellate guidance, this ends our trust in management.",
+          "outcome": "Fell 48%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D37",
+          "entity": "Corvex Payments",
+          "action": "Pass",
+          "timestamp": "2024-03-18T10:00:00+00:00",
+          "rationale": "Corvex named an outside CEO, but the CFO who approved the old accounting remains. Still passing.",
+          "outcome": "+5%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D39",
+          "entity": "Halvard Freight Rail",
+          "action": "Pass",
+          "timestamp": "2024-04-08T10:00:00+00:00",
+          "rationale": "Halvard trades 30% below our exit price and its battery fleet lowers costs, but the management team that hid the Grainline talks is still in place. After Corvex and Orbitra, we now require a leadership change before returning to any company that misled investors. Passing.",
+          "outcome": "+11%. A missed gain, but the rule held.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D41",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-04-29T10:00:00+00:00",
+          "rationale": "Orbitra has restated its utilisation figures and trades at half of book value, but the same executives are in charge. Passing, in line with the leadership rule we set at D39.",
+          "outcome": "Fell 12%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D42",
+          "entity": "Pinehollow Biologics",
+          "action": "Sell",
+          "timestamp": "2024-05-09T14:00:00+00:00",
+          "rationale": "Selling Pinehollow. Phase 3 missed its primary endpoint at 16 weeks, and only the 52-week secondary endpoint was positive. Management had called the trial de-risked at its investor day, which damages its credibility.",
+          "outcome": "Fell 52% on the readout. We sold after the first 40% drop.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D43",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2024-05-20T10:00:00+00:00",
+          "rationale": "Exiting Solvane a second time. A utility customer disclosed a recall of Solvane battery modules for thermal faults that Solvane never mentioned in its filings. Hiding a recall is a credibility failure, and it puts the Halvard Freight Rail rollout at risk.",
+          "outcome": "Fell 35%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D49",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-07-22T10:00:00+00:00",
+          "rationale": "Orbitra has a new CFO, but the CEO who oversaw the utilisation misstatement is still in place. Still passing.",
+          "outcome": "-6%.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D52",
+          "entity": "Pinehollow Biologics",
+          "action": "Pass",
+          "timestamp": "2024-08-23T14:00:00+00:00",
+          "rationale": "Pinehollow plans a new Phase 3 trial built around the 52-week endpoint and trades close to its cash value, but management has never explained why it called the first trial de-risked. Passing, in line with the leadership rule we set at D39.",
+          "outcome": "Flat.",
+          "factor_sentiment": "negative"
+        }
+      ],
+      "downstream_decisions": [
+        {
+          "decision_id": "D38",
+          "entity": "Solvane Energy Storage",
+          "action": "Hold",
+          "timestamp": "2024-03-28T14:00:00+00:00",
+          "rationale": "Solvane delivered the first 12 locomotive packs to Halvard Freight Rail on time, even though Halvard has lost Grainline's volume. Lithium prices remain low. Holding at a 25% gain.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D15",
+          "entity": "Corvex Payments",
+          "action": "Hold",
+          "timestamp": "2023-07-31T10:00:00+00:00",
+          "rationale": "Corvex's CTO left after nine months and payment volume growth slowed to 31%. The business is still healthy, but the departure is unexplained. Holding and not adding until we understand why.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D19",
+          "entity": "Orbitra Networks",
+          "action": "Hold",
+          "timestamp": "2023-09-11T10:00:00+00:00",
+          "rationale": "Orbitra's growth is intact, but Tessellate Data Systems has started testing a terrestrial 5G backhaul provider at three sites. Tessellate is the anchor customer, so any shift matters. Holding and not adding.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D45",
+          "entity": "Corvex Payments",
+          "action": "Buy",
+          "timestamp": "2024-06-10T10:00:00+00:00",
+          "rationale": "Buying Corvex again. The new CEO replaced the CFO and the head of revenue accounting, the restatement review closed with no further adjustments, and volume growth is back to 28%. This meets the leadership condition from D30 and D39. Buying at $21.",
+          "connection": "reverses"
+        },
+        {
+          "decision_id": "D48",
+          "entity": "Halvard Freight Rail",
+          "action": "Buy",
+          "timestamp": "2024-07-12T14:00:00+00:00",
+          "rationale": "Buying Halvard. The board replaced the CEO and the head of investor relations, which meets the leadership condition from D39. The battery fleet has cut fuel cost per ton-mile by 18%, and Halvard has qualified a second battery supplier after the Solvane Energy Storage recall.",
+          "connection": "reverses"
+        },
+        {
+          "decision_id": "D32",
+          "entity": "Pinehollow Biologics",
+          "action": "Buy",
+          "timestamp": "2024-01-26T14:00:00+00:00",
+          "rationale": "Adding to Pinehollow ahead of the Phase 3 readout. A competitor's similar antibody passed its own Phase 3 trial, which lowers the biological risk, and enrollment and dropout rates match the Phase 2 study.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D51",
+          "entity": "Corvex Payments",
+          "action": "Hold",
+          "timestamp": "2024-08-12T10:00:00+00:00",
+          "rationale": "Corvex's first two quarters under the new team were clean, with growth at 29%, and the new CFO now publishes more detailed disclosures than the old team ever did. Holding.",
+          "connection": "reinforces"
+        },
+        {
+          "decision_id": "D21",
+          "entity": "Pinehollow Biologics",
+          "action": "Hold",
+          "timestamp": "2023-10-02T10:00:00+00:00",
+          "rationale": "The Phase 3 trial is fully enrolled, with the readout due in about nine months. The position is up 40%, so we are holding rather than adding ahead of a binary event.",
+          "connection": "updates"
+        }
+      ],
+      "all_decision_ids": [
+        "D15",
+        "D19",
+        "D21",
+        "D22",
+        "D28",
+        "D30",
+        "D31",
+        "D32",
+        "D34",
+        "D37",
+        "D38",
+        "D39",
+        "D41",
+        "D42",
+        "D43",
+        "D45",
+        "D48",
+        "D49",
+        "D51",
+        "D52"
+      ]
+    },
+    "whatif_lithium_price": {
+      "matched_factors": [
+        "lithium price"
+      ],
+      "direct_decisions": [
+        {
+          "decision_id": "D4",
+          "entity": "Solvane Energy Storage",
+          "action": "Buy",
+          "timestamp": "2023-04-07T14:00:00+00:00",
+          "rationale": "Lithium carbonate prices are down about 60% from the peak, and battery cells are Solvane's largest input cost, so margins on its fixed-price utility contracts should expand sharply. Ironbridge Partners, an activist fund, has disclosed a 7% stake and is pushing for a sale of the residential unit. Initiating at $64.",
+          "outcome": "+28% by September 2023 as margins expanded.",
+          "factor_sentiment": "positive"
+        },
+        {
+          "decision_id": "D13",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2023-07-10T10:00:00+00:00",
+          "rationale": "Lithium carbonate prices rose 45% in eight weeks on supply cuts, and about 40% of Solvane's backlog is fixed-price, so margins will compress next year. Cutting the position in half.",
+          "outcome": "Fell 22% after the next earnings call. The trim avoided half the loss.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D20",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2023-09-22T14:00:00+00:00",
+          "rationale": "Exiting Solvane. Lithium prices stayed high, and Ironbridge sold most of its stake after the residential-unit sale fell through, which removes the catalyst. The D4 thesis no longer holds.",
+          "outcome": "Fell another 25% over six months. Good exit.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D27",
+          "entity": "Solvane Energy Storage",
+          "action": "Buy",
+          "timestamp": "2023-12-04T10:00:00+00:00",
+          "rationale": "Reversing our D20 exit. Lithium prices are down 35% from their peak, the fixed-price contracts that hurt margins have rolled off, and Halvard Freight Rail's 40-locomotive order opens a new rail market. Buying at $41.",
+          "outcome": "+33% in six months.",
+          "factor_sentiment": "positive"
+        },
+        {
+          "decision_id": "D38",
+          "entity": "Solvane Energy Storage",
+          "action": "Hold",
+          "timestamp": "2024-03-28T14:00:00+00:00",
+          "rationale": "Solvane delivered the first 12 locomotive packs to Halvard Freight Rail on time, even though Halvard has lost Grainline's volume. Lithium prices remain low. Holding at a 25% gain.",
+          "outcome": "+8%.",
+          "factor_sentiment": "positive"
+        }
+      ],
+      "downstream_decisions": [
+        {
+          "decision_id": "D43",
+          "entity": "Solvane Energy Storage",
+          "action": "Sell",
+          "timestamp": "2024-05-20T10:00:00+00:00",
+          "rationale": "Exiting Solvane a second time. A utility customer disclosed a recall of Solvane battery modules for thermal faults that Solvane never mentioned in its filings. Hiding a recall is a credibility failure, and it puts the Halvard Freight Rail rollout at risk.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D10",
+          "entity": "Solvane Energy Storage",
+          "action": "Hold",
+          "timestamp": "2023-06-08T14:00:00+00:00",
+          "rationale": "Ironbridge won two board seats and the sale process for the residential unit has started. Margins expanded as expected, but the share price already reflects most of it. Holding.",
+          "connection": "updates"
+        }
+      ],
+      "all_decision_ids": [
+        "D10",
+        "D13",
+        "D20",
+        "D27",
+        "D38",
+        "D4",
+        "D43"
+      ]
+    },
+    "whatif_customer_concentration": {
+      "matched_factors": [
+        "customer concentration"
+      ],
+      "direct_decisions": [
+        {
+          "decision_id": "D6",
+          "entity": "Kestrion Avionics",
+          "action": "Pass",
+          "timestamp": "2023-04-27T14:00:00+00:00",
+          "rationale": "Kestrion's flight-control software is best in class, but one airframer accounts for 68% of revenue and that customer's delivery schedule keeps slipping. We would revisit if Kestrion wins a second major airframer and its largest customer falls below 50% of revenue.",
+          "outcome": "Fell 18% over the next quarter on delivery delays.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D17",
+          "entity": "Kestrion Avionics",
+          "action": "Buy",
+          "timestamp": "2023-08-21T10:00:00+00:00",
+          "rationale": "Reversing our D6 pass. Kestrion won the flight-control contract for a second airframer's regional jet, which brings its largest customer down to 47% of revenue. The stock is also 20% cheaper than when we passed. Initiating at $52.",
+          "outcome": "+38% over the next nine months.",
+          "factor_sentiment": "positive"
+        },
+        {
+          "decision_id": "D18",
+          "entity": "Thistledown Foods",
+          "action": "Hold",
+          "timestamp": "2023-08-31T14:00:00+00:00",
+          "rationale": "The plant closures are on track, but Northvale Grocers, which accounts for 19% of Thistledown's sales, is paying suppliers late. Holding while we watch Northvale's credit.",
+          "outcome": "Fell 9% as Northvale's problems grew.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D19",
+          "entity": "Orbitra Networks",
+          "action": "Hold",
+          "timestamp": "2023-09-11T10:00:00+00:00",
+          "rationale": "Orbitra's growth is intact, but Tessellate Data Systems has started testing a terrestrial 5G backhaul provider at three sites. Tessellate is the anchor customer, so any shift matters. Holding and not adding.",
+          "outcome": "Flat.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D26",
+          "entity": "Thistledown Foods",
+          "action": "Sell",
+          "timestamp": "2023-11-23T14:00:00+00:00",
+          "rationale": "Selling Thistledown. Northvale Grocers filed for bankruptcy, and Thistledown will write off about $40 million of receivables and lose shelf space as Northvale closes stores. The customer concentration risk has now played out.",
+          "outcome": "Fell 17%, then recovered within five months.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D28",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2023-12-15T14:00:00+00:00",
+          "rationale": "Cutting Orbitra by two-thirds. Tessellate Data Systems moved 40% of its traffic to terrestrial 5G, a quarter after Orbitra's CFO called the contract fully secure. Management's credibility has taken a real hit.",
+          "outcome": "Fell 30% over three months.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D31",
+          "entity": "Halvard Freight Rail",
+          "action": "Sell",
+          "timestamp": "2024-01-15T10:00:00+00:00",
+          "rationale": "Exiting Halvard. Grainline Cooperative, which ships 31% of Halvard's volume, will run its own rail fleet from next year. Management knew the talks were under way and still guided for volume growth, so we no longer trust its guidance.",
+          "outcome": "Fell 26% over two months.",
+          "factor_sentiment": "negative"
+        },
+        {
+          "decision_id": "D35",
+          "entity": "Thistledown Foods",
+          "action": "Buy",
+          "timestamp": "2024-02-26T10:00:00+00:00",
+          "rationale": "Reversing our D26 sale. Thistledown replaced Northvale's shelf space through two national chains, and no single customer is now above 12% of sales. Buying at $38, below our original entry.",
+          "outcome": "+29% over nine months.",
+          "factor_sentiment": "positive"
+        }
+      ],
+      "downstream_decisions": [
+        {
+          "decision_id": "D39",
+          "entity": "Halvard Freight Rail",
+          "action": "Pass",
+          "timestamp": "2024-04-08T10:00:00+00:00",
+          "rationale": "Halvard trades 30% below our exit price and its battery fleet lowers costs, but the management team that hid the Grainline talks is still in place. After Corvex and Orbitra, we now require a leadership change before returning to any company that misled investors. Passing.",
+          "connection": "reinforces"
+        },
+        {
+          "decision_id": "D34",
+          "entity": "Orbitra Networks",
+          "action": "Sell",
+          "timestamp": "2024-02-15T14:00:00+00:00",
+          "rationale": "Selling the rest of Orbitra. A short-seller report showed that Orbitra counted reserved but unused capacity as utilised, and the company has since confirmed it. After the overconfident Tessellate guidance, this ends our trust in management.",
+          "connection": "updates"
+        },
+        {
+          "decision_id": "D46",
+          "entity": "Thistledown Foods",
+          "action": "Hold",
+          "timestamp": "2024-06-20T14:00:00+00:00",
+          "rationale": "Thistledown's turnaround is working: volume is up 7% and margins are above where they were before the Northvale bankruptcy. Holding at a fair valuation.",
+          "connection": "reinforces"
+        },
+        {
+          "decision_id": "D25",
+          "entity": "Kestrion Avionics",
+          "action": "Buy",
+          "timestamp": "2023-11-13T10:00:00+00:00",
+          "rationale": "Adding to Kestrion. The second airframer's regional jet entered flight testing on schedule, and Kestrion's software content per aircraft is 30% higher than on its older programme.",
+          "connection": "reinforces"
+        },
+        {
+          "decision_id": "D48",
+          "entity": "Halvard Freight Rail",
+          "action": "Buy",
+          "timestamp": "2024-07-12T14:00:00+00:00",
+          "rationale": "Buying Halvard. The board replaced the CEO and the head of investor relations, which meets the leadership condition from D39. The battery fleet has cut fuel cost per ton-mile by 18%, and Halvard has qualified a second battery supplier after the Solvane Energy Storage recall.",
+          "connection": "reverses"
+        },
+        {
+          "decision_id": "D41",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-04-29T10:00:00+00:00",
+          "rationale": "Orbitra has restated its utilisation figures and trades at half of book value, but the same executives are in charge. Passing, in line with the leadership rule we set at D39.",
+          "connection": "reinforces"
+        },
+        {
+          "decision_id": "D49",
+          "entity": "Orbitra Networks",
+          "action": "Pass",
+          "timestamp": "2024-07-22T10:00:00+00:00",
+          "rationale": "Orbitra has a new CFO, but the CEO who oversaw the utilisation misstatement is still in place. Still passing.",
+          "connection": "reinforces"
+        }
+      ],
+      "all_decision_ids": [
+        "D17",
+        "D18",
+        "D19",
+        "D25",
+        "D26",
+        "D28",
+        "D31",
+        "D34",
+        "D35",
+        "D39",
+        "D41",
+        "D46",
+        "D48",
+        "D49",
+        "D6"
+      ]
+    }
+  }
+}
