@@ -25,9 +25,11 @@ from models import (
     GraphElements,
 )
 
+
 def derive_entities(records: list[DecisionRecord]) -> list[str]:
     """
     Derive unique entity names from input decisions, preserving first-seen order.
+    Makes the system generic — works on any dataset, not just the 8 hardcoded companies.
     """
     seen = set()
     entities = []
@@ -37,6 +39,19 @@ def derive_entities(records: list[DecisionRecord]) -> list[str]:
             seen.add(name)
             entities.append(name)
     return entities
+
+
+# Fallback for tests and direct calls that don't pass records
+_FALLBACK_ENTITIES = [
+    "Corvex Payments",
+    "Thistledown Foods",
+    "Kestrion Avionics",
+    "Solvane Energy Storage",
+    "Orbitra Networks",
+    "Pinehollow Biologics",
+    "Halvard Freight Rail",
+    "Tessellate Data Systems",
+]
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -48,7 +63,7 @@ investment decision rationales. You always return valid JSON and nothing else.
 Your job is to read one investment decision rationale and extract:
 1. factors — the 2-4 key themes or conditions that drove this decision
 2. events — discrete named occurrences referenced (earnings, contracts, regulatory actions, etc.)
-3. reversals — if this decision explicitly reverses or references a prior decision by ID
+3. reversals — if this decision changes or references a prior position on the SAME entity
 4. cross_references — other portfolio companies mentioned as influencing context
 5. decision_theme — one sentence capturing the core logic
 
@@ -58,14 +73,21 @@ EVENT TYPES (use exactly one): earnings | management_change | contract | regulat
 REVERSAL TYPES: reverses | reinforces | updates
 
 RULES:
-- Factor names must be short and canonical (2-4 words). Use consistent names across decisions.
-  Good: "management credibility", "customer concentration", "lithium price", "revenue momentum"
-  Bad:  "concerns about management", "the fact that lithium prices fell"
-- Events must be specific, not generic.
-  Good: "Northvale Grocers bankruptcy", "Phase 3 readout", "Ironbridge activist exit", "second airframer contract"
-  Bad:  "negative news", "a contract", "some management changes"
-- Only extract reversals when the rationale explicitly calls back to a prior decision.
-- cross_references are ONLY for other companies in the portfolio being mentioned as context.
+- Factor names must be short and canonical (2-4 words). Use EXACTLY these names when they apply:
+  "management credibility", "revenue momentum", "customer concentration", "lithium price",
+  "gross margin", "backhaul cost", "valuation pullback", "activist catalyst", "activist exit",
+  "satellite capacity", "supplier dependence", "binary clinical risk", "regulatory risk",
+  "competitive pressure", "free cash flow", "leadership change", "fuel cost"
+  For anything else, keep names to 2-4 words, lowercase, no filler words.
+- Events must be specific named occurrences, not generic descriptions.
+  Good: "Northvale Grocers bankruptcy", "Phase 3 readout", "second airframer contract", "Ironbridge activist exit"
+  Bad:  "negative news", "a contract announcement", "management changes"
+- Reversals: look for language like "reversing our earlier", "re-entering", "exiting again",
+  "adding to", "returning to", "our original thesis", "we previously passed".
+  When found, identify which prior decision on this same entity is being reversed using the
+  prior decisions list provided. Set referenced_decision_id to the most recent prior decision
+  on the same entity that this one is changing.
+- cross_references are ONLY for other portfolio companies explicitly mentioned.
 - Return ONLY a JSON object. No markdown, no explanation."""
 
 USER_PROMPT_TEMPLATE = """Decision ID: {decision_id}
@@ -75,10 +97,11 @@ Timestamp: {timestamp}
 Rationale: {rationale}
 Outcome: {outcome}
 
+Prior decisions on {entity} (for reversal detection — use these IDs):
+{prior_same_entity}
+
 All portfolio companies (for cross-reference detection):
 {entities}
-
-Prior decision IDs in this portfolio (for reversal detection): {all_ids}
 
 Return JSON matching this exact schema:
 {{
@@ -90,10 +113,10 @@ Return JSON matching this exact schema:
     {{"name": "string", "event_type": "earnings|management_change|contract|regulatory|competitor|market|activist|clinical_trial|accounting"}}
   ],
   "reversals": [
-    {{"referenced_decision_id": "D##", "reversal_type": "reverses|reinforces|updates", "reason": "string"}}
+    {{"referenced_decision_id": "D##", "reversal_type": "reverses|reinforces|updates", "reason": "one sentence"}}
   ],
   "cross_references": [
-    {{"entity": "string", "reason": "string"}}
+    {{"entity": "string", "reason": "one sentence"}}
   ],
   "decision_theme": "string"
 }}"""
@@ -101,9 +124,26 @@ Return JSON matching this exact schema:
 
 def build_prompt(
     record: DecisionRecord,
-    known_entities: list[str],
     all_decision_ids: Optional[list[str]] = None,
+    all_records: Optional[list] = None,
+    known_entities: Optional[list[str]] = None,
 ) -> str:
+    # Pass prior decisions on the SAME entity only — much more useful for
+    # reversal detection than a flat list of all IDs.
+    if all_records:
+        ts = record.timestamp if isinstance(record.timestamp, str) else record.timestamp.isoformat()
+        prior_same = [
+            f"  {r.id} ({r.decision}, {(r.timestamp if isinstance(r.timestamp, str) else r.timestamp.isoformat())[:10]})"
+            for r in all_records
+            if r.entity == record.entity and r.id != record.id
+            and (r.timestamp if isinstance(r.timestamp, str) else r.timestamp.isoformat()) < ts
+        ]
+        prior_same_str = "\n".join(prior_same) if prior_same else "  (none — first decision on this entity)"
+    else:
+        prior_same_str = "  " + ", ".join(all_decision_ids or []) if all_decision_ids else "  (none)"
+
+    entities = known_entities or _FALLBACK_ENTITIES
+
     return USER_PROMPT_TEMPLATE.format(
         decision_id=record.id,
         entity=record.entity,
@@ -111,8 +151,8 @@ def build_prompt(
         timestamp=record.timestamp if isinstance(record.timestamp, str) else record.timestamp.isoformat(),
         rationale=record.rationale,
         outcome=record.outcome or "Unknown",
-        entities="\n".join(f"- {e}" for e in known_entities),
-        all_ids=", ".join(all_decision_ids or []),
+        entities="\n".join(f"- {e}" for e in entities),
+        prior_same_entity=prior_same_str,
     )
 
 
@@ -124,6 +164,7 @@ def extract(
     record: DecisionRecord,
     client,  # anthropic.Anthropic client
     all_decision_ids: Optional[list[str]] = None,
+    all_records: Optional[list] = None,
     known_entities: Optional[list[str]] = None,
     model: str = "claude-sonnet-4-20250514",
     retries: int = 2,
@@ -132,8 +173,12 @@ def extract(
     Extract graph elements from one DecisionRecord.
     Retries on JSON parse failure up to `retries` times.
     """
-    known_entities = known_entities or [record.entity]
-    prompt = build_prompt(record, known_entities, all_decision_ids)
+    prompt = build_prompt(
+        record,
+        all_decision_ids,
+        all_records=all_records,
+        known_entities=known_entities,
+    )
 
     for attempt in range(retries + 1):
         try:
@@ -150,7 +195,7 @@ def extract(
             raw = re.sub(r"\s*```$", "", raw)
 
             data = json.loads(raw)
-            return _parse_elements(data, record.id, known_entities)
+            return _parse_elements(data, record.id, known_entities=known_entities)
 
         except (json.JSONDecodeError, KeyError, ValueError) as e:
             if attempt == retries:
@@ -160,8 +205,14 @@ def extract(
             time.sleep(1)
 
 
-def _parse_elements(data: dict, decision_id: str, known_entities: list[str]) -> GraphElements:
+def _parse_elements(
+    data: dict,
+    decision_id: str,
+    known_entities: Optional[list[str]] = None,   # Optional — falls back to _FALLBACK_ENTITIES
+) -> GraphElements:
     """Parse raw LLM JSON into GraphElements. Lenient — skips malformed sub-items."""
+    _entities = known_entities or _FALLBACK_ENTITIES
+
     factors = []
     for f in data.get("factors", []):
         try:
@@ -186,8 +237,7 @@ def _parse_elements(data: dict, decision_id: str, known_entities: list[str]) -> 
     cross_refs = []
     for c in data.get("cross_references", []):
         try:
-            # Only accept entities we actually know about
-            if c.get("entity") in known_entities and c.get("entity") != "":
+            if c.get("entity") in _entities and c.get("entity") != "":
                 cross_refs.append(ExtractedCrossReference(**c))
         except Exception:
             pass
@@ -214,7 +264,9 @@ def extract_all(
 ) -> list[GraphElements]:
     """
     Extract graph elements for all records.
-    Passes all decision IDs so the LLM can detect reversals accurately.
+    Derives entity names from the dataset — works on any input, not just the
+    hardcoded 8 companies. Passes all_records so each call can see prior
+    decisions on the same entity for accurate reversal detection.
     """
     all_ids = [r.id for r in records]
     known_entities = derive_entities(records)
@@ -227,6 +279,7 @@ def extract_all(
             record,
             client,
             all_decision_ids=all_ids,
+            all_records=records,
             known_entities=known_entities,
             model=model,
         )
