@@ -64,8 +64,8 @@ class TestBuildPrompt:
 
     def test_prompt_contains_rationale(self, all_records):
         prompt = build_prompt(all_records[0], [])
-        # rationale from D1 contains this phrase
-        assert "40%" in prompt or "revenue" in prompt.lower()
+        # rationale from D1 contains these phrases
+        assert "45%" in prompt and "mid-market merchants" in prompt
 
 
 class TestParseElements:
@@ -126,7 +126,7 @@ class TestParseElements:
     def test_cross_reference_valid_entity_kept(self):
         raw = {
             "decision_id": "D12",
-            "factors": [{"name": "chip cost advantage", "category": "fundamental", "sentiment": "positive"}],
+            "factors": [{"name": "backhaul cost advantage", "category": "fundamental", "sentiment": "positive"}],
             "events": [],
             "reversals": [],
             "cross_references": [
@@ -141,7 +141,7 @@ class TestParseElements:
     def test_cross_reference_unknown_entity_filtered(self):
         raw = {
             "decision_id": "D12",
-            "factors": [{"name": "chip cost", "category": "fundamental", "sentiment": "positive"}],
+            "factors": [{"name": "backhaul cost", "category": "fundamental", "sentiment": "positive"}],
             "events": [],
             "reversals": [],
             "cross_references": [

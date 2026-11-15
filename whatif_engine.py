@@ -20,6 +20,7 @@ from typing import Any
 
 import networkx as nx
 
+from extractor import DEFAULT_MODEL, call_claude
 from models import EdgeType, NodeType, WhatIfResult
 
 
@@ -171,7 +172,7 @@ def assess_impact(
     hypothetical_change: str,
     affected: dict[str, Any],
     client,
-    model: str = "claude-sonnet-4-20250514",
+    model: str = DEFAULT_MODEL,
 ) -> dict[str, Any]:
     """Call LLM once to reason about impact. Returns parsed JSON dict."""
 
@@ -200,14 +201,7 @@ def assess_impact(
         decisions_summary="\n".join(lines),
     )
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=1024,
-        system=WHATIF_SYSTEM,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    raw = response.content[0].text.strip()
+    raw = call_claude(client, model, WHATIF_SYSTEM, prompt)
     # Strip markdown fences if present
     import re
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
@@ -233,7 +227,7 @@ def whatif(
     factor_name: str,
     hypothetical_change: str,
     client,
-    model: str = "claude-sonnet-4-20250514",
+    model: str = DEFAULT_MODEL,
 ) -> WhatIfResult:
     """
     Full what-if pipeline:

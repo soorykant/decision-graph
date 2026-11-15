@@ -1,0 +1,1571 @@
+{
+  "note": "Hand-written extractions in the exact shape the LLM extraction prompt returns. Used by `python sample_run.py --offline` to build the graph without an API key.",
+  "extractions": [
+    {
+      "decision_id": "D1",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "merchant growth",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "management quality",
+          "category": "management",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "card-network CTO hire",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Fast payment-volume growth and a strong new CTO justify an initial position."
+    },
+    {
+      "decision_id": "D2",
+      "factors": [
+        {
+          "name": "satellite capacity",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "revenue visibility",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "Tessellate backhaul contract",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "The five-year Tessellate backhaul contract underpins Orbitra's revenue visibility."
+        }
+      ],
+      "decision_theme": "Doubled satellite capacity plus an anchor customer contract make Orbitra a buy."
+    },
+    {
+      "decision_id": "D3",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "founder-CEO retirement",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Solid volume growth, but no new money until a CEO successor is named."
+    },
+    {
+      "decision_id": "D4",
+      "factors": [
+        {
+          "name": "lithium price",
+          "category": "macro",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "activist catalyst",
+          "category": "catalyst",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "Ironbridge activist entry",
+          "event_type": "activist"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Falling lithium costs widen margins on fixed-price contracts, and an activist adds a catalyst."
+    },
+    {
+      "decision_id": "D5",
+      "factors": [
+        {
+          "name": "backhaul cost",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "net revenue retention",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Cheap satellite backhaul from Orbitra is the source of Tessellate's cost advantage."
+        }
+      ],
+      "decision_theme": "Low-cost backhaul and strong retention make Tessellate a high-margin buy."
+    },
+    {
+      "decision_id": "D6",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "airframer delivery delays",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "product quality",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Best-in-class software is not enough while one airframer is 68% of revenue."
+    },
+    {
+      "decision_id": "D7",
+      "factors": [
+        {
+          "name": "cost leadership",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "fuel cost",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "battery locomotive pilot",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Solvane Energy Storage",
+          "reason": "Halvard's battery locomotive pilot runs on Solvane storage packs."
+        }
+      ],
+      "decision_theme": "The lowest-cost hauler with upside from a battery locomotive pilot."
+    },
+    {
+      "decision_id": "D8",
+      "factors": [
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "financing risk",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Phase 1 readout",
+          "event_type": "clinical_trial"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Too early and too short of cash to invest before Phase 2 data."
+    },
+    {
+      "decision_id": "D9",
+      "factors": [
+        {
+          "name": "satellite capacity",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "execution",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "third satellite launch",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D2",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D2 position after the launch succeeded and the Tessellate contract went live."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "The Tessellate contract going live on schedule supports the thesis."
+        }
+      ],
+      "decision_theme": "Successful launch and early utilisation justify adding to Orbitra."
+    },
+    {
+      "decision_id": "D10",
+      "factors": [
+        {
+          "name": "activist catalyst",
+          "category": "catalyst",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "valuation",
+          "category": "valuation",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Ironbridge board seats",
+          "event_type": "activist"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "The thesis is playing out but is mostly priced in, so hold."
+    },
+    {
+      "decision_id": "D11",
+      "factors": [
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "positive"
+        },
+        {
+          "name": "cost restructuring",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "new CEO appointment",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D3",
+          "reversal_type": "updates",
+          "reason": "The CEO appointment resolves the leadership uncertainty behind the D3 hold."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A credible new CEO removes the reason for waiting, so add."
+    },
+    {
+      "decision_id": "D12",
+      "factors": [
+        {
+          "name": "backhaul cost",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "channel expansion",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "telecom reseller agreements",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D5",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D5 position as backhaul costs fall further."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Orbitra's capacity expansion lowers Tessellate's backhaul cost by another 15%."
+        }
+      ],
+      "decision_theme": "Falling supplier costs and new resellers justify adding to Tessellate."
+    },
+    {
+      "decision_id": "D13",
+      "factors": [
+        {
+          "name": "lithium price",
+          "category": "macro",
+          "sentiment": "negative"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "lithium supply cuts",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D10",
+          "reversal_type": "updates",
+          "reason": "Halving the position held at D10 as input costs rise."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Rising lithium prices will squeeze fixed-price contracts, so trim by half."
+    },
+    {
+      "decision_id": "D14",
+      "factors": [
+        {
+          "name": "volume decline",
+          "category": "fundamental",
+          "sentiment": "negative"
+        },
+        {
+          "name": "pricing power",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "battery locomotive pilot",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Softer volumes are offset by pricing; wait for winter pilot data."
+    },
+    {
+      "decision_id": "D15",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "negative"
+        },
+        {
+          "name": "management quality",
+          "category": "management",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "CTO departure",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "An unexplained CTO exit and slowing growth stop further buying."
+    },
+    {
+      "decision_id": "D16",
+      "factors": [
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "name": "financing risk",
+          "category": "risk",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "Phase 2 readout",
+          "event_type": "clinical_trial"
+        },
+        {
+          "name": "equity raise",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D8",
+          "reversal_type": "reverses",
+          "reason": "Strong Phase 2 data and new cash remove the reasons for the D8 pass."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Positive Phase 2 data and two years of cash turn a pass into a buy."
+    },
+    {
+      "decision_id": "D17",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "second airframer contract",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D6",
+          "reversal_type": "reverses",
+          "reason": "The customer-concentration condition set at the D6 pass has been met."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A second airframer cuts customer concentration below 50%, reversing the pass."
+    },
+    {
+      "decision_id": "D18",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "cost restructuring",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "Northvale Grocers late payments",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Restructuring is on track, but a major customer's credit is weakening."
+    },
+    {
+      "decision_id": "D19",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "competitive pressure",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Tessellate 5G backhaul trial",
+          "event_type": "competitor"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "Tessellate, the anchor customer, is testing a terrestrial 5G alternative."
+        }
+      ],
+      "decision_theme": "Growth is intact, but the anchor customer is testing a rival, so stop adding."
+    },
+    {
+      "decision_id": "D20",
+      "factors": [
+        {
+          "name": "lithium price",
+          "category": "macro",
+          "sentiment": "negative"
+        },
+        {
+          "name": "activist exit",
+          "category": "catalyst",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Ironbridge activist exit",
+          "event_type": "activist"
+        },
+        {
+          "name": "residential-unit sale collapse",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D13",
+          "reversal_type": "updates",
+          "reason": "Selling the rest of the position trimmed at D13; the D4 thesis no longer holds."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "High lithium prices and a departed activist break the original thesis."
+    },
+    {
+      "decision_id": "D21",
+      "factors": [
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "neutral"
+        },
+        {
+          "name": "valuation",
+          "category": "valuation",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Phase 3 enrollment completion",
+          "event_type": "clinical_trial"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Hold rather than add ahead of a binary Phase 3 readout."
+    },
+    {
+      "decision_id": "D22",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "negative"
+        },
+        {
+          "name": "accounting quality",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "revenue restatement",
+          "event_type": "accounting"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D15",
+          "reversal_type": "updates",
+          "reason": "The restatement confirms the concerns behind the D15 hold, so exit."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A revenue restatement destroys trust in management's numbers."
+    },
+    {
+      "decision_id": "D23",
+      "factors": [
+        {
+          "name": "fuel cost",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "supplier dependence",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "40-locomotive order",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Solvane Energy Storage",
+          "reason": "Halvard's locomotive order depends on Solvane, whose margin problems add delivery risk."
+        }
+      ],
+      "decision_theme": "The battery pilot works, but reliance on a struggling supplier argues for holding."
+    },
+    {
+      "decision_id": "D24",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "supplier dependence",
+          "category": "risk",
+          "sentiment": "neutral"
+        }
+      ],
+      "events": [
+        {
+          "name": "Tessellate 5G backhaul trial",
+          "event_type": "competitor"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Tessellate may move traffic off Orbitra's satellite backhaul."
+        }
+      ],
+      "decision_theme": "Steady growth; a possible supplier switch trades short-term cost for resilience."
+    },
+    {
+      "decision_id": "D25",
+      "factors": [
+        {
+          "name": "content per aircraft",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "execution",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "regional jet flight testing",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D17",
+          "reversal_type": "reinforces",
+          "reason": "Adding to the D17 position as the new program stays on schedule."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "On-schedule flight testing and higher content per aircraft justify adding."
+    },
+    {
+      "decision_id": "D26",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "receivables write-off",
+          "category": "fundamental",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Northvale Grocers bankruptcy",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "A major customer's bankruptcy makes the concentration risk real, so sell."
+    },
+    {
+      "decision_id": "D27",
+      "factors": [
+        {
+          "name": "lithium price",
+          "category": "macro",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "new market entry",
+          "category": "catalyst",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "Halvard locomotive order",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D20",
+          "reversal_type": "reverses",
+          "reason": "Lower lithium prices and expired contracts undo the reasons for the D20 exit."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Halvard Freight Rail",
+          "reason": "Halvard's 40-locomotive order opens a rail market for Solvane."
+        }
+      ],
+      "decision_theme": "The conditions behind the exit have reversed, so re-enter."
+    },
+    {
+      "decision_id": "D28",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Tessellate traffic shift",
+          "event_type": "competitor"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D19",
+          "reversal_type": "updates",
+          "reason": "The Tessellate risk flagged at D19 has materialised."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "Tessellate is diversifying away from Orbitra by moving 40% of its traffic to 5G."
+        }
+      ],
+      "decision_theme": "The anchor customer left after management called the contract secure, so cut hard."
+    },
+    {
+      "decision_id": "D29",
+      "factors": [
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "negative"
+        },
+        {
+          "name": "supplier dependence",
+          "category": "risk",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "5G backhaul migration",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Tessellate no longer depends on Orbitra as a single supplier."
+        }
+      ],
+      "decision_theme": "Lower margins now, but a more resilient business, so hold."
+    },
+    {
+      "decision_id": "D30",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        },
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "restatement review",
+          "event_type": "accounting"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Cheap, but the leaders behind the restatement are still in charge, so pass."
+    },
+    {
+      "decision_id": "D31",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Grainline in-house fleet",
+          "event_type": "competitor"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Management guided for growth while hiding the loss of a 31% customer, so exit."
+    },
+    {
+      "decision_id": "D32",
+      "factors": [
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "name": "competitor validation",
+          "category": "catalyst",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "competitor Phase 3 success",
+          "event_type": "competitor"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D21",
+          "reversal_type": "updates",
+          "reason": "Moving from the D21 hold to adding as the biological risk falls."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A rival's Phase 3 success lowers the risk enough to add before the readout."
+    },
+    {
+      "decision_id": "D33",
+      "factors": [
+        {
+          "name": "certification delay",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "content per aircraft",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "regional jet certification delay",
+          "event_type": "regulatory"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "A delay outside Kestrion's control shifts revenue, but the win stands."
+    },
+    {
+      "decision_id": "D34",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "accounting quality",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "short-seller report",
+          "event_type": "market"
+        },
+        {
+          "name": "utilisation restatement",
+          "event_type": "accounting"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D28",
+          "reversal_type": "updates",
+          "reason": "Selling the stake left after the D28 cut."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Tessellate Data Systems",
+          "reason": "The overconfident guidance on the Tessellate contract was the first credibility hit."
+        }
+      ],
+      "decision_theme": "Overstated utilisation ends any trust in management, so sell everything."
+    },
+    {
+      "decision_id": "D35",
+      "factors": [
+        {
+          "name": "customer concentration",
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "national chain distribution deals",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D26",
+          "reversal_type": "reverses",
+          "reason": "Lost shelf space has been replaced and concentration is low, undoing the D26 sale."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Concentration risk is fixed and the price is below the first entry, so re-enter."
+    },
+    {
+      "decision_id": "D36",
+      "factors": [
+        {
+          "name": "supplier dependence",
+          "category": "risk",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "5G backhaul migration",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D29",
+          "reversal_type": "reinforces",
+          "reason": "The diversification judged positive at D29 has paid off."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Leaving Orbitra looks prescient after the short-seller report."
+        }
+      ],
+      "decision_theme": "Supplier diversification proved right and margins recovered, so add."
+    },
+    {
+      "decision_id": "D37",
+      "factors": [
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "outside CEO appointment",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D30",
+          "reversal_type": "reinforces",
+          "reason": "The D30 pass stands because the CFO from the restatement era remains."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A new CEO is not enough while the old CFO stays, so keep passing."
+    },
+    {
+      "decision_id": "D38",
+      "factors": [
+        {
+          "name": "execution",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "lithium price",
+          "category": "macro",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "first locomotive pack deliveries",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [
+        {
+          "entity": "Halvard Freight Rail",
+          "reason": "Solvane delivered Halvard's first locomotive packs on time."
+        }
+      ],
+      "decision_theme": "On-time deliveries and low lithium prices support holding."
+    },
+    {
+      "decision_id": "D39",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [
+        {
+          "referenced_decision_id": "D31",
+          "reversal_type": "reinforces",
+          "reason": "The management behind the D31 exit is still in place."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Corvex Payments",
+          "reason": "Corvex is one of the credibility failures behind the new leadership rule."
+        },
+        {
+          "entity": "Orbitra Networks",
+          "reason": "Orbitra is the other credibility failure behind the new leadership rule."
+        }
+      ],
+      "decision_theme": "A new rule: no return to a company that misled investors until leadership changes."
+    },
+    {
+      "decision_id": "D40",
+      "factors": [
+        {
+          "name": "certification progress",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "valuation",
+          "category": "valuation",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "regional jet certification",
+          "event_type": "regulatory"
+        }
+      ],
+      "reversals": [],
+      "cross_references": [],
+      "decision_theme": "Certification is back on track, but after a 40% gain, hold."
+    },
+    {
+      "decision_id": "D41",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "utilisation restatement",
+          "event_type": "accounting"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D34",
+          "reversal_type": "reinforces",
+          "reason": "The D34 exit stands; the same executives are in charge."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Cheap, but the leadership rule from D39 says pass."
+    },
+    {
+      "decision_id": "D42",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "Phase 3 readout",
+          "event_type": "clinical_trial"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D32",
+          "reversal_type": "updates",
+          "reason": "The Phase 3 miss undoes the case for the D32 addition."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A Phase 3 miss after management called the trial de-risked, so sell."
+    },
+    {
+      "decision_id": "D43",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "product safety",
+          "category": "risk",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "battery module recall",
+          "event_type": "regulatory"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D38",
+          "reversal_type": "updates",
+          "reason": "Exiting the position held at D38 after an undisclosed recall."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Halvard Freight Rail",
+          "reason": "The recall puts the Halvard locomotive rollout at risk."
+        }
+      ],
+      "decision_theme": "An undisclosed safety recall is a credibility failure, so exit again."
+    },
+    {
+      "decision_id": "D44",
+      "factors": [
+        {
+          "name": "valuation",
+          "category": "valuation",
+          "sentiment": "negative"
+        },
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [
+        {
+          "referenced_decision_id": "D36",
+          "reversal_type": "updates",
+          "reason": "Trimming the position built from D5 to D36 after a 90% gain."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Strong business, stretched valuation, so take some profit."
+    },
+    {
+      "decision_id": "D45",
+      "factors": [
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "positive"
+        },
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "accounting quality",
+          "category": "risk",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "CFO replacement",
+          "event_type": "management_change"
+        },
+        {
+          "name": "restatement review closure",
+          "event_type": "accounting"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D37",
+          "reversal_type": "reverses",
+          "reason": "New finance leadership meets the condition that kept the D37 pass in place."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Leadership turnover satisfies the D39 rule and growth is back, so buy again."
+    },
+    {
+      "decision_id": "D46",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "gross margin",
+          "category": "fundamental",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [
+        {
+          "referenced_decision_id": "D35",
+          "reversal_type": "reinforces",
+          "reason": "The turnaround bought at D35 is working."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "The turnaround is delivering at a fair price, so hold."
+    },
+    {
+      "decision_id": "D47",
+      "factors": [
+        {
+          "name": "valuation",
+          "category": "valuation",
+          "sentiment": "negative"
+        },
+        {
+          "name": "content per aircraft",
+          "category": "fundamental",
+          "sentiment": "neutral"
+        }
+      ],
+      "events": [
+        {
+          "name": "regional jet entry into service",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D40",
+          "reversal_type": "updates",
+          "reason": "Exiting the position held at D40 now that the content story has played out."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "The thesis has played out and the price assumes more, so take the gain."
+    },
+    {
+      "decision_id": "D48",
+      "factors": [
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "positive"
+        },
+        {
+          "name": "fuel cost",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "supplier dependence",
+          "category": "risk",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "CEO replacement",
+          "event_type": "management_change"
+        },
+        {
+          "name": "second battery supplier qualification",
+          "event_type": "contract"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D39",
+          "reversal_type": "reverses",
+          "reason": "The leadership change required at the D39 pass has happened."
+        }
+      ],
+      "cross_references": [
+        {
+          "entity": "Solvane Energy Storage",
+          "reason": "Halvard qualified a second battery supplier after the Solvane recall."
+        }
+      ],
+      "decision_theme": "New leadership meets the rule and fuel savings are proven, so buy."
+    },
+    {
+      "decision_id": "D49",
+      "factors": [
+        {
+          "name": "leadership change",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        }
+      ],
+      "events": [
+        {
+          "name": "new CFO appointment",
+          "event_type": "management_change"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D41",
+          "reversal_type": "reinforces",
+          "reason": "The D41 pass stands while the CEO remains."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "A new CFO is not enough while the CEO stays, so keep passing."
+    },
+    {
+      "decision_id": "D50",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "5G backhaul migration",
+          "event_type": "market"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D44",
+          "reversal_type": "reverses",
+          "reason": "Buying back after the pullback that followed the D44 trim."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Growth reaccelerated after a pullback, so add back."
+    },
+    {
+      "decision_id": "D51",
+      "factors": [
+        {
+          "name": "revenue momentum",
+          "category": "fundamental",
+          "sentiment": "positive"
+        },
+        {
+          "name": "disclosure quality",
+          "category": "management",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [],
+      "reversals": [
+        {
+          "referenced_decision_id": "D45",
+          "reversal_type": "reinforces",
+          "reason": "The re-entry at D45 is being confirmed by clean results."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Clean quarters and better disclosure under new leaders, so hold."
+    },
+    {
+      "decision_id": "D52",
+      "factors": [
+        {
+          "name": "management credibility",
+          "category": "management",
+          "sentiment": "negative"
+        },
+        {
+          "name": "binary clinical risk",
+          "category": "risk",
+          "sentiment": "negative"
+        },
+        {
+          "name": "valuation pullback",
+          "category": "valuation",
+          "sentiment": "positive"
+        }
+      ],
+      "events": [
+        {
+          "name": "new Phase 3 trial plan",
+          "event_type": "clinical_trial"
+        }
+      ],
+      "reversals": [
+        {
+          "referenced_decision_id": "D42",
+          "reversal_type": "reinforces",
+          "reason": "The D42 exit stands; management has not addressed its earlier claims."
+        }
+      ],
+      "cross_references": [],
+      "decision_theme": "Near cash value, but unexplained claims fail the leadership rule, so pass."
+    }
+  ]
+}

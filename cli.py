@@ -83,7 +83,7 @@ def print_json(data: dict):
 @app.command()
 def build(
     data_path: str = typer.Option("decisions.json", "--data", "-d", help="Path to decisions.json"),
-    model: str = typer.Option("claude-sonnet-4-20250514", "--model", "-m", help="LLM model"),
+    model: str = typer.Option("claude-sonnet-5-5", "--model", "-m", help="LLM model"),
     output: str = typer.Option("graph.json", "--output", "-o", help="Output graph file"),
 ):
     """Extract graph elements from all decisions and build the graph."""
@@ -162,7 +162,7 @@ def query(
 # lineage
 # ---------------------------------------------------------------------------
 
-@app.command()
+@app.command(name="lineage")
 def lineage_cmd(
     decision_id: str = typer.Argument(..., help="Decision ID, e.g. D22"),
     depth: int = typer.Option(3, "--depth", "-d", help="Max traversal depth"),
@@ -292,11 +292,11 @@ def reversals():
 # whatif
 # ---------------------------------------------------------------------------
 
-@app.command()
+@app.command(name="whatif")
 def whatif_cmd(
     factor_name: str = typer.Argument(..., help="Factor to change, e.g. 'lithium price'"),
     change: str = typer.Argument(..., help="The hypothetical change, e.g. 'drops from $80 to $50'"),
-    model: str = typer.Option("claude-sonnet-4-20250514", "--model"),
+    model: str = typer.Option("claude-sonnet-5-5", "--model"),
     dry_run: bool = typer.Option(False, "--dry-run", help="Show affected decisions without calling LLM"),
 ):
     """Run a what-if counterfactual analysis."""

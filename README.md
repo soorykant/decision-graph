@@ -22,29 +22,32 @@ export ANTHROPIC_API_KEY=sk-ant-your-key-here
 
 # 3. Run
 python sample_run.py
+
+# No API key? Build the same graph from the hand-written extractions instead
+python sample_run.py --offline
 ```
 
 `sample_run.py` does the following in order:
 
 1. Loads `decisions.json` (52 records)
-2. Calls `claude-sonnet-4-20250514` once per decision to extract structured graph elements (~2–3 min, prints live progress)
+2. Calls `claude-sonnet-5-5` once per decision to extract structured graph elements (~2–3 min, prints live progress). With `--offline` it reads `extractions.json` instead and makes no API calls
 3. Builds the NetworkX graph and saves it to `graph.json`
 4. Runs 18 queries across all query types
 5. Saves everything to `example_output.json`
 6. Prints a summary — node/edge counts, reversals found, management credibility breakdown, strongest cross-entity link
 
-> `graph.json` and `example_output.json` are already included from a real run. You can skip `sample_run.py` and query the pre-built graph directly.
+> `graph.json` and `example_output.json` are already included, so you can skip `sample_run.py` and query the pre-built graph directly (for example `python cli.py lineage D22`). They were built with `--offline` from `extractions.json`: extractions written by hand in the exact JSON shape the extraction prompt asks the LLM for, and passed through the same parser. They are not the output of a live LLM run. Run `python sample_run.py` with an API key to rebuild them from real extractions.
 
 ---
 
 ## What this system does
 
-Fernhill Capital made 52 investment decisions over 18 months across 8 portfolio companies. Each decision has a 1–3 sentence rationale. Hidden inside those rationales are patterns that were never made explicit:
+The included dataset is synthetic: Fernhill Capital, a fictional investment team, made 52 decisions over 18 months across 8 fictional companies. All companies, people and figures are invented. Each decision has a 1–3 sentence rationale. Hidden inside those rationales are patterns that were never made explicit:
 
-- **Recurring factors** — "management credibility" appears across Corvex, Orbitra, Kestrion, Solvane, and Halvard
-- **Causal chains** — D17 reverses D6 (a Pass became a Buy when the diversification condition was met)
-- **Cross-company dependencies** — Tessellate↔Orbitra is a thread running through 10+ decisions
-- **Thesis evolution** — the team's pattern recognition sharpened over time but was never recorded
+- **Recurring factors** — "management credibility" drives exits at Corvex, Orbitra, Halvard, Solvane and Pinehollow
+- **Causal chains** — D17 reverses D6 (a Pass became a Buy once Kestrion won a second airframer and its customer concentration fell)
+- **Cross-company dependencies** — Orbitra↔Tessellate is a thread running through 10 decisions, and Solvane↔Halvard through 6 more
+- **Thesis evolution** — after two credibility failures the team adopts a leadership rule at D39 and applies it at D41, D45, D48 and D52, though the rule exists only inside rationale text
 
 This system extracts all of that structure, builds a directed graph, and makes it queryable — plus a what-if engine for counterfactual reasoning.
 
@@ -93,9 +96,10 @@ decision-graph/
 ├── api.py                 # FastAPI — 11 endpoints + SSE streaming
 ├── cli.py                 # Typer CLI — 9 commands
 ├── sample_run.py          # End-to-end run script (builds graph + runs all queries)
-├── decisions.json         # The 52-decision dataset
-├── graph.json             # Pre-built graph from a real run
-├── example_output.json    # Full query output from a real run
+├── decisions.json         # The 52-decision synthetic dataset
+├── extractions.json       # Hand-written extractions for --offline runs
+├── graph.json             # Pre-built graph (from --offline)
+├── example_output.json    # Full query output (from --offline)
 ├── requirements.txt
 ├── pytest.ini
 └── tests/
@@ -117,7 +121,7 @@ decision-graph/
 | Type       | Represents                             | Example                  |
 | ---------- | -------------------------------------- | ------------------------ |
 | `decision` | One of the 52 investment decisions     | `Buy Corvex Payments (D1)` |
-| `entity`   | A portfolio company                    | `Orbitra Networks`   |
+| `entity`   | A portfolio company                    | `Orbitra Networks`       |
 | `factor`   | A recurring theme that drove decisions | `management credibility` |
 | `event`    | A discrete named occurrence            | `Northvale Grocers bankruptcy` |
 
@@ -147,7 +151,7 @@ python cli.py factors sell
 # Every decision influenced by management credibility
 python cli.py by-factor "management credibility"
 
-# Full lineage for the Corvex accounting fraud exit
+# Full lineage for the Corvex revenue-restatement exit
 python cli.py lineage D22
 
 # Which companies are connected and how?
@@ -226,7 +230,7 @@ pytest tests/ -v
 
 **One LLM call per decision, not batch.** Each rationale needs the full list of prior decision IDs to correctly detect reversals. Batching would truncate that context. Per-decision calls also make SSE streaming natural — one `extracted` event per decision.
 
-**Factor normalisation without a second LLM call.** "Management credibility" and "management quality" must stay distinct; "lithium price" and "lithium prices" must be the same node. `difflib.SequenceMatcher` at a 0.92 threshold handles this deterministically. The critical boundary — "management credibility" vs "management quality" scores 0.75 (below), "lithium price" vs "lithium prices" scores 0.95 (above). Isolated to `FactorNormalizer` so it's a drop-in swap for embeddings.
+**Factor normalisation without a second LLM call.** "Management credibility" and "management quality" must stay distinct; "lithium price" and "lithium prices" must be the same node. `difflib.SequenceMatcher` at a 0.92 threshold handles this deterministically. The critical boundary — "management credibility" vs "management quality" scores 0.75 (below), "lithium price" vs "lithium prices" scores 0.96 (above). Isolated to `FactorNormalizer` so it's a drop-in swap for embeddings.
 
 **Two-step what-if.** Graph traversal finds affected decisions instantly for free. The LLM then reasons about whether those decisions would actually change. Separating them means `--dry-run` is useful, traversal is testable without an API key, and the LLM is swappable.
 
@@ -303,4 +307,4 @@ Designed independently: the two-step what-if architecture, the 0.92 threshold ca
 
 **Keeping the query layer LLM-free.** The temptation is to call the LLM inside query functions to summarise results. Resisting that made the layer fast, testable, and deterministic — but required front-loading more structure into the extraction phase. The `decision_theme` field in `GraphElements` exists specifically so queries can return one-sentence summaries without an LLM call.
 
-**Reversal detection.** Explicit reversals ("Reversing our earlier pass") are easy. Implicit ones (D29 re-entering Solvane after D20's exit) are stated obliquely. The prompt identifies reversals only when the rationale directly references a prior decision ID — this keeps the signal clean but misses some. Embedding similarity between rationales would catch more.
+**Reversal detection.** Explicit reversals ("Reversing our earlier pass") are easy. Implicit ones (D45 re-entering Corvex, which cites the leadership rule but never D22's exit) are stated obliquely. The prompt identifies reversals only when the rationale directly references a prior decision ID — this keeps the signal clean but misses some. Embedding similarity between rationales would catch more.

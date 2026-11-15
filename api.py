@@ -99,7 +99,7 @@ def get_client() -> anthropic.Anthropic:
 
 class BuildRequest(BaseModel):
     data_path: str = "decisions.json"
-    model: str = "claude-sonnet-4-20250514"
+    model: str = "claude-sonnet-5-5"
 
 
 class BuildResponse(BaseModel):
@@ -119,7 +119,7 @@ class QueryRequest(BaseModel):
 class WhatIfRequest(BaseModel):
     factor_name: str
     hypothetical_change: str
-    model: str = "claude-sonnet-4-20250514"
+    model: str = "claude-sonnet-5-5"
 
 
 # ---------------------------------------------------------------------------
@@ -411,7 +411,7 @@ async def _stream_build_events(
 @app.get("/stream/build")
 async def stream_build(
     data_path: str = Query(default="decisions.json"),
-    model: str = Query(default="claude-sonnet-4-20250514"),
+    model: str = Query(default="claude-sonnet-5-5"),
 ):
     """
     SSE endpoint: build graph with live progress events.

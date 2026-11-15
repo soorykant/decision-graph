@@ -25,6 +25,34 @@ from models import (
     GraphElements,
 )
 
+DEFAULT_MODEL = "claude-sonnet-5-5"
+
+
+def call_claude(client, model: str, system: str, prompt: str, max_tokens: int = 8000) -> str:
+    """
+    Send one prompt and return the reply text.
+
+    Runs at low effort (this is structured extraction, not open-ended reasoning) and
+    turns on server-side refusal fallback. Text is read by block type, because a
+    response can start with thinking blocks. Raises ValueError on a refusal or an
+    empty reply, so callers can retry.
+    """
+    response = client.beta.messages.create(
+        model=model,
+        max_tokens=max_tokens,  # room for thinking plus the JSON reply
+        output_config={"effort": "low"},
+        betas=["server-side-fallback-2026-07-01"],
+        fallbacks="default",
+        system=system,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    if response.stop_reason == "refusal":
+        raise ValueError(f"Model declined the request (request {response._request_id})")
+    text = "".join(block.text for block in response.content if block.type == "text").strip()
+    if not text:
+        raise ValueError(f"Empty reply (stop_reason={response.stop_reason})")
+    return text
+
 
 def derive_entities(records: list[DecisionRecord]) -> list[str]:
     """
@@ -166,7 +194,7 @@ def extract(
     all_decision_ids: Optional[list[str]] = None,
     all_records: Optional[list] = None,
     known_entities: Optional[list[str]] = None,
-    model: str = "claude-sonnet-4-20250514",
+    model: str = DEFAULT_MODEL,
     retries: int = 2,
 ) -> GraphElements:
     """
@@ -182,13 +210,7 @@ def extract(
 
     for attempt in range(retries + 1):
         try:
-            response = client.messages.create(
-                model=model,
-                max_tokens=1024,
-                system=SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw = response.content[0].text.strip()
+            raw = call_claude(client, model, SYSTEM_PROMPT, prompt)
 
             # Strip markdown fences if the model adds them despite instructions
             raw = re.sub(r"^```(?:json)?\s*", "", raw)
@@ -259,7 +281,7 @@ def _parse_elements(
 def extract_all(
     records: list[DecisionRecord],
     client,
-    model: str = "claude-sonnet-4-20250514",
+    model: str = DEFAULT_MODEL,
     verbose: bool = True,
 ) -> list[GraphElements]:
     """
