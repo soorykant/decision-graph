@@ -1,6 +1,8 @@
 # Decision Graph
 
-**Decision Graph.** Take 52 historical investment decisions written in plain English, extract the implicit causal structure using an LLM, and build a directed knowledge graph that makes that reasoning queryable, traceable, and explorable.
+Investment teams record every decision with a short written rationale, but the reasoning that links those decisions (the recurring factors, the reversals, the dependencies between companies) is never written down. It stays in people's heads.
+
+This project recovers that hidden structure. It takes 52 historical investment decisions written in plain English, uses an LLM to extract the implicit causal structure, and builds a directed knowledge graph that makes the reasoning queryable, traceable, and explorable. A what-if engine on top of it answers counterfactual questions.
 
 ---
 
