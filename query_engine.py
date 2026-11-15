@@ -200,6 +200,7 @@ def lineage(
 
     This is the 'decision archaeology' function.
     """
+    decision_id = decision_id.strip().upper()   # accept "d22" as well as "D22"
     target_node = f"decision:{decision_id}"
 
     if not G.has_node(target_node):

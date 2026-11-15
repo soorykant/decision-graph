@@ -211,10 +211,10 @@ pytest tests/ -v
 
 | Module                  | Tests | Covers                                                               |
 | ----------------------- | ----- | -------------------------------------------------------------------- |
-| `test_models.py`        | 14    | Schema validation, enum values                                       |
-| `test_extractor.py`     | 12    | Data loading, prompt building, response parsing, cross-ref filtering |
-| `test_graph_builder.py` | 15    | Graph construction, factor dedup, node/edge types, save/load         |
-| `test_query_engine.py`  | 28    | All 6 query functions, edge cases, dispatcher routing                |
+| `test_models.py`        | 15    | Schema validation, enum values                                       |
+| `test_extractor.py`     | 19    | Data loading, prompt building, response parsing, cross-ref filtering |
+| `test_graph_builder.py` | 24    | Graph construction, factor dedup, node/edge types, save/load         |
+| `test_query_engine.py`  | 38    | All 6 query functions, edge cases, dispatcher routing                |
 | `test_whatif_engine.py` | 10    | Traversal logic, reversal chains, empty cases                        |
 
 

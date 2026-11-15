@@ -7,7 +7,8 @@ Tests: data loading, prompt construction, response parsing,
 
 import pytest
 from extractor import (
-    KNOWN_ENTITIES,
+    _FALLBACK_ENTITIES,
+    derive_entities,
     _parse_elements,
     build_prompt,
     load_decisions,
@@ -58,7 +59,7 @@ class TestBuildPrompt:
 
     def test_prompt_contains_known_entities(self, all_records):
         prompt = build_prompt(all_records[0], [])
-        for entity in KNOWN_ENTITIES:
+        for entity in _FALLBACK_ENTITIES:
             assert entity in prompt
 
     def test_prompt_contains_rationale(self, all_records):
@@ -184,7 +185,12 @@ class TestParseElements:
         assert len(elements.factors) == 0
 
     def test_known_entities_list_complete(self):
-        assert len(KNOWN_ENTITIES) == 8
-        assert "Corvex Payments" in KNOWN_ENTITIES
-        assert "Orbitra Networks" in KNOWN_ENTITIES
-        assert "Tessellate Data Systems" in KNOWN_ENTITIES
+        assert len(_FALLBACK_ENTITIES) == 8
+        assert "Corvex Payments" in _FALLBACK_ENTITIES
+        assert "Orbitra Networks" in _FALLBACK_ENTITIES
+        assert "Tessellate Data Systems" in _FALLBACK_ENTITIES
+
+    def test_derived_entities_match_the_dataset(self):
+        entities = derive_entities(load_decisions("decisions.json"))
+        assert len(entities) == len(set(entities)) == 8
+        assert set(entities) == set(_FALLBACK_ENTITIES)
